@@ -28,6 +28,9 @@ namespace Spectare
         private void TestButton_Click(object sender, RoutedEventArgs e)
         {
 
+            Settings settingsWindow = new Settings();
+            settingsWindow.Show();
+            Close();
         }
     }
 }

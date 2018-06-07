@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Spectare"
         mc:Ignorable="d"
-        Title="Spectare" Height="450" Width="800">
+        Title="Spectare" Height="450" Name="RegisterWindow" Width="800">
     <Grid>
         
     </Grid>
