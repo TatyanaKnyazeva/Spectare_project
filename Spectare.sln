@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spectare", "Spectare\Spectare.csproj", "{A7ADD809-AED2-48CA-9F42-2E731C949883}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spectare.Classes", "Spectare.Classes\Spectare.Classes.csproj", "{2BC8D74F-C6E5-48B2-BB71-92CB96936859}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A7ADD809-AED2-48CA-9F42-2E731C949883}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7ADD809-AED2-48CA-9F42-2E731C949883}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7ADD809-AED2-48CA-9F42-2E731C949883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BC8D74F-C6E5-48B2-BB71-92CB96936859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC8D74F-C6E5-48B2-BB71-92CB96936859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC8D74F-C6E5-48B2-BB71-92CB96936859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC8D74F-C6E5-48B2-BB71-92CB96936859}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
