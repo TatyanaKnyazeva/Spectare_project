@@ -14,7 +14,7 @@ namespace Spectare.Classes
         public string PosterLink { get; set; }
         public string TrailerLink { get; set; }
         public string WebLink { get; set; }
-        public List<Type> Types { get; set; }
+        public List<FilmType> Types { get; set; }
         public List<Actor> Actors { get; set; }
         public List<User> Users { get; set; }
         public List<string> PhotoLinks { get; set; }
