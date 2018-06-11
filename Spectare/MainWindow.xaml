@@ -48,7 +48,7 @@
                         <Image Grid.Column="0" Source="images/person1.png"/>
                         <TextBox Name="textbox1" Grid.Column="1" VerticalAlignment="Center" FontSize="12" 
                                  BorderThickness="0 0 0 0" Foreground="Silver"
-                                 GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" 
+                                 GotFocus="TextBox_GotFocus"  LostFocus="TextBox_LostFocus" 
                                  Text="Full Name"/>
                     </Grid>
                 </Border>
@@ -64,7 +64,7 @@
                         <Image Grid.Column="0" Source="images/email.png"/>
                         <TextBox Name="textbox2" Grid.Column="1" VerticalAlignment="Center" FontSize="12" 
                                  BorderThickness="0 0 0 0" Foreground="Silver"
-                                 GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" 
+                                 GotFocus="TextBox_GotFocus"  LostFocus="TextBox_LostFocus"
                                  Text="Email" />
                     </Grid>
                 </Border>

@@ -148,5 +148,14 @@
   <ItemGroup>
     <EmbeddedResource Include="Images\cinemab.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\person1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\password1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\email.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
