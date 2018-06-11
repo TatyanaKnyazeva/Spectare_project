@@ -5,8 +5,89 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Spectare"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="507.765" Width="724.659">
     <Grid>
-        <Button Width="70" Height="30" Name="TestButton" Content="Test" Click="TestButton_Click" ></Button>
+        <Grid.Background>
+            <ImageBrush ImageSource="images/cinemab.png"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="323*"/>
+            <ColumnDefinition Width="394*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="419*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.Row="1" CornerRadius="5" Margin="21 0 10 63" Background="White" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.6*"/>
+                    <RowDefinition Height="0.3"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" BorderBrush="Silver" BorderThickness="0 0 0 0.5">
+                    <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Right" Orientation="Horizontal">
+                        <TextBlock Margin="1 1 1 1" Foreground="#FF976161" FontSize="14">Already have an account?</TextBlock>
+                        <Button Name="loginbutton" Margin="3 1 7 1" Background="#FF6CDAEC" Foreground="White"
+                                VerticalAlignment="Center" HorizontalAlignment="Center"
+                                Click="loginbutton_Click">Login</Button>
+                    </StackPanel>
+                </Border>
+                <Border Grid.Row="2" BorderBrush="Silver" BorderThickness="0.5" CornerRadius="5" Margin="20 10 20 10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="images/person1.png"/>
+                        <TextBox Name="textbox1" Grid.Column="1" VerticalAlignment="Center" FontSize="12" 
+                                 BorderThickness="0 0 0 0" Foreground="Silver"
+                                 GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" 
+                                 Text="Full Name"/>
+                    </Grid>
+                </Border>
+
+                <TextBlock Grid.Row="3" Name="textblockname"  Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center" />
+
+                <Border Grid.Row="4" BorderBrush="Silver" BorderThickness="0.5" CornerRadius="5" Margin="20 10 20 10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="images/email.png"/>
+                        <TextBox Name="textbox2" Grid.Column="1" VerticalAlignment="Center" FontSize="12" 
+                                 BorderThickness="0 0 0 0" Foreground="Silver"
+                                 GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" 
+                                 Text="Email" />
+                    </Grid>
+                </Border>
+                <TextBlock Name="textblockemail" Grid.Row="5" Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Border Grid.Row="6" BorderBrush="Silver" BorderThickness="0.5" CornerRadius="5" Margin="20 10 20 10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="images/Password1.png"/>
+                        <TextBox Name="textbox3" Grid.Column="1" VerticalAlignment="Center" FontSize="12" 
+                                 BorderThickness="0 0 0 0" Foreground="Silver"
+                                 GotFocus="textbox3_GotFocus"  Text="Password(at least 8 characters)"/>
+                        <PasswordBox Name="passwordbox" Grid.Column="1" BorderThickness="0 0 0 0" LostFocus="passwordbox_LostFocus"
+                                     VerticalAlignment="Center" Visibility="Collapsed"/>
+                    </Grid>
+                </Border>
+                <TextBlock Name="textblockpassw" Grid.Row="7" Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Button Name="signupbutton" Grid.Row="8" VerticalAlignment="Top" HorizontalAlignment="Stretch" 
+                        Margin="40 15 40 0" Foreground="White" FontSize="16" Background="#FFE6E1E1"
+                        BorderBrush="#FFE6E1E1"  Click="signupbutton_Click">Create account</Button>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
