@@ -170,7 +170,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="FilmsMedia1\Великий Гэтсби 1.jpg" />
+    <Resource Include="FilmsMedia1\Великий Гэтсби 2.jpg" />
+    <Resource Include="FilmsMedia1\Великий Гэтсби постер.jpg" />
+    <Content Include="FilmsMedia1\Великий Гэтсби.mp4" />
+    <Resource Include="FilmsMedia1\Волк с Уолл-стрит 1.jpg" />
+    <Resource Include="FilmsMedia1\Волк с Уолл-стрит 2.jpg" />
+    <Resource Include="FilmsMedia1\Волк с Уолл-стрит 3.jpg" />
+    <Resource Include="FilmsMedia1\Волк с Уолл-стрит постер.jpg" />
+    <Content Include="FilmsMedia1\Волк с Уолл-стрит.mp4" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\cinemab.png" />
   </ItemGroup>
