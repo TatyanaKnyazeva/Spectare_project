@@ -11,7 +11,7 @@ namespace Spectare.Classes
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Film> Films { get; set; }
-        public DbSet<Type> Types { get; set; }
+        public DbSet<FilmType> Types { get; set; }
         public DbSet<Actor> Actors { get; set; }
 
         public Context() : base("SpectareDb")

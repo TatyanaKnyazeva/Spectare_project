@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Spectare.Classes
 {
-    public class Type
+    public class FilmType
     {
         public int Id { get; set; }
         public string Name { get; set; }
