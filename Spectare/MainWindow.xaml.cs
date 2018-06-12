@@ -25,12 +25,34 @@ namespace Spectare
             InitializeComponent();
         }
 
-        private void TestButton_Click(object sender, RoutedEventArgs e)
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
 
-            Settings settingsWindow = new Settings();
-            settingsWindow.Show();
-            Close();
+        }
+
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void loginbutton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void textbox3_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void passwordbox_LostFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void signupbutton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

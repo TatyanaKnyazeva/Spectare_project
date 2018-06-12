@@ -1,0 +1,76 @@
+﻿<Window x:Class="Spectare.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Spectare"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="350" Width="550">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="images/bluebg.png"/>
+        </Grid.Background>
+        <Border Margin="25" Background="White" CornerRadius="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock FontSize="25" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="#FFFFB30F">Login to your account</TextBlock>
+                <Border Grid.Row="1" BorderBrush="Silver" BorderThickness="1" CornerRadius="5" Margin="20 10 20 10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="images/email.png"/>
+                        <TextBox Name="emailtextbox" Grid.Column="1" VerticalAlignment="Center" FontSize="12" 
+                                 BorderThickness="0 0 0 0" Foreground="Silver"
+                                 GotFocus="TextBox_GotFocus"  LostFocus="TextBox_LostFocus"
+                                 Text="Email"/>
+                    </Grid>
+                </Border>
+                <Border Grid.Row="2" BorderBrush="Silver" BorderThickness="1" CornerRadius="5" Margin="20 10 20 10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="images/Password1.png"/>
+                        <TextBox Name="passwordtextbox"  Grid.Column="1" VerticalAlignment="Center" FontSize="12" 
+                                 BorderThickness="0 0 0 0" Foreground="Silver"
+                                 GotFocus="passwordtextbox_GotFocus"  Text="Password(at least 8 characters)"/>
+                        <PasswordBox Name="passwordbox" Grid.Column="1" BorderThickness="0 0 0 0" LostFocus="passwordbox_LostFocus"
+                                     VerticalAlignment="Center" Visibility="Collapsed"/>
+                    </Grid>
+                </Border>
+                <StackPanel Grid.Row="3" Orientation="Horizontal"
+                    VerticalAlignment="Center" HorizontalAlignment="Right"
+                    Margin="15">
+                    <Button Name="signup" Margin="5" Content="Sign up" Foreground="#FF6B97F5" Click="signup_Click" >
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="Transparent" Padding="10 5">
+                                    <ContentPresenter/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button Name="login" VerticalAlignment="Center" HorizontalAlignment="Stretch" 
+                    Margin="5" Content="Log in" Foreground="White" Click="login_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="#FF6B97F5" Padding="10 5">
+                                    <ContentPresenter/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
