@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Spectare.FilmItemControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Spectare"
+             mc:Ignorable="d" 
+             d:DesignHeight="186" d:DesignWidth="189">
+    <Grid Background="White" d:DataContext="{x:Static local:FilmsListItemdesignModel.item}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding FSName}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        <Image Grid.Column="1" Grid.Row="1" Source="{Binding ImagePath}"/>
+
+    </Grid>
+</UserControl>
