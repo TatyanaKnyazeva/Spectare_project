@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Spectare
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для LoginWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginWindow : Window
     {
-        public MainWindow()
+        public LoginWindow()
         {
             InitializeComponent();
         }
@@ -35,12 +34,7 @@ namespace Spectare
 
         }
 
-        private void loginbutton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void textbox3_GotFocus(object sender, RoutedEventArgs e)
+        private void passwordtextbox_GotFocus(object sender, RoutedEventArgs e)
         {
 
         }
@@ -50,7 +44,12 @@ namespace Spectare
 
         }
 
-        private void signupbutton_Click(object sender, RoutedEventArgs e)
+        private void signup_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void login_Click(object sender, RoutedEventArgs e)
         {
 
         }
