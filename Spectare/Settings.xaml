@@ -18,28 +18,27 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Grid.ColumnSpan="3" Style="{StaticResource headerTextStyle}">Edit your information</Label>
-        <Grid Grid.Row="1" Grid.ColumnSpan="3">
+        <Label  Style="{StaticResource headerTextStyle}" Grid.Row="0" Grid.Column="0">Edit your information</Label>
+        <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBox Width="200" FontSize="20" VerticalAlignment="Center" Margin="5"
-                     Name="textBoxName" LostFocus="textBoxName_LostFocus"></TextBox>
+            <TextBox Grid.Column="0" Width="200" FontSize="20" VerticalAlignment="Center" 
+                     HorizontalAlignment="Center" Name="textBoxName" LostFocus="textBoxName_LostFocus"/>
             <TextBox Width="200" Foreground="#d8d8d8" FontSize="20" VerticalAlignment="Center"
                      Margin="5" Visibility="Hidden"
                      Name="fakeTextBoxName" GotFocus="fakeTextBoxName_GotFocus">Name</TextBox>
             <TextBlock Name="emptyNameMessage" Visibility="Collapsed" Grid.Row="1" 
                        HorizontalAlignment="Center" Width="200" Foreground="Red">Name field must be not empty</TextBlock>
         </Grid>
-        <Grid Grid.Row="2" Grid.ColumnSpan="3">
+        <Grid Grid.Row="2">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBox Width="200" FontSize="20" VerticalAlignment="Center" Margin="5"
+            <TextBox Grid.Row="0" Grid.Column="0" Width="200" FontSize="20" VerticalAlignment="Center" Margin="5"
                      Name="textBoxSurname" LostFocus="textBoxSurname_LostFocus"></TextBox>
             <TextBox Width="200" Foreground="#d8d8d8" FontSize="20" 
                      VerticalAlignment="Center" Margin="5" Visibility="Collapsed"
@@ -47,12 +46,12 @@
             <TextBlock Name="emptySurnameMessage" Visibility="Collapsed" Grid.Row="1" 
                        HorizontalAlignment="Center" Width="200" Foreground="Red">Surname field must be not empty</TextBlock>
         </Grid>
-        <Grid Grid.Row="3" Grid.ColumnSpan="3">
+        <Grid Grid.Row="3">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBox Width="200" FontSize="20" VerticalAlignment="Center" Margin="5"
+            <TextBox Grid.Row="0" Grid.Column="0" Width="200" FontSize="20" VerticalAlignment="Center" Margin="5"
                      Name="textBoxEmail" LostFocus="textBoxEmail_LostFocus"/>
             <TextBox Width="200" Foreground="#d8d8d8" FontSize="20" 
                      VerticalAlignment="Center" Margin="5" Visibility="Collapsed"
@@ -69,13 +68,15 @@
                 Click="Button_PasswordChange_Click">Change Password</Button>-->
         <!--<Button Grid.Row="4" Grid.ColumnSpan="3" VerticalAlignment="Bottom"
                 Margin="0 0 0 10" Width="200" FontSize="20" Click="Button_Submit_Click">Submit</Button>-->
-        <!--<Button Grid.Row="5" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+        <!--<Button Grid.Row="5" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"
                 Margin="5" Height="40" Width="75" Click="Button_Back_Click">Back</Button>-->
-        <Button Grid.Row="5" Grid.Column="1" Style="{StaticResource buttonStyle}" Click="Button_LogOut_Click">Log Out</Button>
-        <!--<Button Grid.Row="5" Grid.Column="2" VerticalAlignment="Bottom"
+        <Button Grid.Row="5" Grid.Column="0" Style="{StaticResource buttonStyle}" Click="Button_LogOut_Click">Log Out</Button>
+        <!--<Button Grid.Row="5" Grid.Column="0" VerticalAlignment="Bottom"
                 Click="Button_DeleteAccount_Click"
                 Margin="5" Height="40" Width="75" HorizontalAlignment="Center">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center">Delete Account</TextBlock>
         </Button>-->
+        <Label  Style="{StaticResource headerTextStyle}" Grid.Row="0" Grid.Column="1">Edit your preferences</Label>
+        <Button Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}" Click="GoToHelper"> My helper</Button>
     </Grid>
 </Window>
