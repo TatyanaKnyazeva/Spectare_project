@@ -157,5 +157,16 @@
   <ItemGroup>
     <Resource Include="Images\email.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FilmsMedia\Великий Гэтсби 1.jpg" />
+    <Resource Include="FilmsMedia\Великий Гэтсби 2.jpg" />
+    <Resource Include="FilmsMedia\Великий Гэтсби постер.jpg" />
+    <Content Include="FilmsMedia\Великий Гэтсби.mp4" />
+    <Resource Include="FilmsMedia\Волк с Уолл-стрит 1.jpg" />
+    <Resource Include="FilmsMedia\Волк с Уолл-стрит 2.jpg" />
+    <Resource Include="FilmsMedia\Волк с Уолл-стрит 3.jpg" />
+    <Resource Include="FilmsMedia\Волк с Уолл-стрит постер.jpg" />
+    <Content Include="FilmsMedia\Волк с Уолл-стрит.mp4" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
