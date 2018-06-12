@@ -161,6 +161,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="1" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -171,6 +172,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\Sherlock.gif" />
     <Resource Include="FilmsMedia1\Великий Гэтсби 1.jpg" />
     <Resource Include="FilmsMedia1\Великий Гэтсби 2.jpg" />
     <Resource Include="FilmsMedia1\Великий Гэтсби постер.jpg" />
