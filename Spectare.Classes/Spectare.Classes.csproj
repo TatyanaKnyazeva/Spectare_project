@@ -69,6 +69,7 @@
       <DependentUpon>201806111948257_Changing type on filmtype.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PasswordHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Type.cs" />
     <Compile Include="User.cs" />

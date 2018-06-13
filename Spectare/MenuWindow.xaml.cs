@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spectare.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,8 @@ namespace Spectare
     /// </summary>
     public partial class MenuWindow : Window
     {
-        public MenuWindow()
+        DbMethods methods = new DbMethods();
+        public MenuWindow(DbMethods _methods)
         {
             InitializeComponent();
         }

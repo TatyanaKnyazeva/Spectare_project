@@ -20,6 +20,7 @@ namespace Spectare
     /// </summary>
     public partial class Settings : Window
     {
+        
         public Settings()
         {
             InitializeComponent();
