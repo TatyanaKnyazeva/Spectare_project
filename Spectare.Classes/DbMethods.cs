@@ -9,6 +9,8 @@ namespace Spectare.Classes
 {
     public class DbMethods
     {
+        User _user;
+
         public static string GetHash(string password)
         {
             var md5 = MD5.Create();
@@ -29,6 +31,57 @@ namespace Spectare.Classes
             {
                 context.Users.Add(NewUser);
                 context.SaveChanges();
+            }
+        }
+
+        public bool Authorization(string email, string password)
+        {
+            using (var context = new Context())
+            {
+                password = GetHash(password);
+                var user = context.Users.Include("FavFilms").FirstOrDefault(u => u.Email == email && u.Password == password);
+                if (user != null)
+                {
+                    _user = user;
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        public void AddToFavorites(User user, Film film)
+        {
+            using (var context = new Context())
+            {
+                context.Users.Include("FavFilms").FirstOrDefault(u => u.Name == user.Name).FavFilms.Add(film);
+                context.SaveChanges();
+            }
+        }
+
+        public void RemoveFromFavorites(User user, Film film)
+        {
+            using (var context = new Context())
+            {
+                context.Users.Include("FavFilms").FirstOrDefault(u => u.Name == user.Name).FavFilms.Remove(film);
+                context.SaveChanges();
+            }
+        }
+
+        public List<Film> GetAllFilms()
+        {
+            using (var context = new Context())
+            {
+                var films = context.Films.Include("Actors").Include("Types").ToList();
+                return films;
+            }
+        }
+
+        public Film GetFilmByName(string Name)
+        {
+            using (var context = new Context())
+            {
+                var film = context.Films.Include("Actors").Include("Types").FirstOrDefault(f => f.Title == Name);
+                return film;
             }
         }
     }
