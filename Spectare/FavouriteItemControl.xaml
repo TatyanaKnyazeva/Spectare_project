@@ -6,7 +6,10 @@
              xmlns:local="clr-namespace:Spectare"
              mc:Ignorable="d" 
              d:DesignHeight="62" d:DesignWidth="567">
-    <Grid Background="#FFFFF9F9" d:DataContext="{StaticResource FavouriteItemDesignModel.item}">
+    <UserControl.Resources>
+        <local:FavouriteItemDesignModel x:Key="FavouriteItem"/>
+    </UserControl.Resources>
+    <Grid Background="#FFFFF9F9" d:DataContext="{x:Static local:FavouriteItemDesignModel.item}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40*"/>
             <ColumnDefinition Width="98*"/>

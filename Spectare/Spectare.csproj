@@ -190,9 +190,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Images\cinemab.png" />
+    <ProjectReference Include="..\Spectare.Classes\Spectare.Classes.csproj">
+      <Project>{2BC8D74F-C6E5-48B2-BB71-92CB96936859}</Project>
+      <Name>Spectare.Classes</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\person1.png" />
@@ -205,6 +207,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\bluebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cinemab.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

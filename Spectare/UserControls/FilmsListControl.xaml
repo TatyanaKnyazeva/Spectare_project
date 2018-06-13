@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="434" d:DesignWidth="567">
     
-    <Grid Background="White" d:DataContext="{StaticResource FilmsListDesignModel.item}">
+    <Grid Background="White" d:DataContext="{x:Static local:FilmsListDesignModel.Items}">
         <ScrollViewer VerticalScrollBarVisibility="Hidden">
             <ItemsControl>
                 <ItemsControl.ItemsPanel>
