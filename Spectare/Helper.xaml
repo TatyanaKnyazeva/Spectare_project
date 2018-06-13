@@ -5,19 +5,112 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Spectare"
         mc:Ignorable="d"
-        Title="Helper" Height="450" Width="800">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Image Source="Sherlock.gif" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left"/>
-    </Grid>
+        Title="Helper" Height="700" Width="1000" >
+    <Window.Resources>
+        <!-- Пузырь -->
+        <Style x:Key="Bubble" TargetType="Control">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Control">
+                        <Grid SnapsToDevicePixels="True">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="10"/>
+                            </Grid.RowDefinitions>
+                            <Polygon Grid.Row="0" Grid.Column="0" Points="0 10, 10 0, 10 10" Fill="{TemplateBinding Background}"/>
+                            <Rectangle Grid.Row="0" Grid.Column="1" Fill="{TemplateBinding Background}"/>
+                            <Polygon Grid.Row="0" Grid.Column="2" Points="0 0, 10 10, 0 10" Fill="{TemplateBinding Background}"/>
+                            <Rectangle Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Fill="{TemplateBinding Background}"/>
+                            <Polygon Grid.Row="2" Grid.Column="0" Points="0 0, 10 0, 10 10, 8 8, 0 10, 5 5" Fill="{TemplateBinding Background}"/>
+                            <Rectangle Grid.Row="2" Grid.Column="1" Fill="{TemplateBinding Background}"/>
+                            <Polygon Grid.Row="2" Grid.Column="2" Points="0 0, 10 0, 0 10" Fill="{TemplateBinding Background}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- Текст с переносом строк -->
+        <Style x:Key="WrapStyle" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <!-- Текст в пузыре, левая версия -->
+        <Style x:Key="BubbleLeftStyle" TargetType="ContentControl">
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ContentControl">
+                        <Grid Margin="{TemplateBinding Margin}">
+                            <Control Style="{StaticResource Bubble}" Background="LimeGreen"/>
+                            <ContentPresenter Margin="{TemplateBinding Padding}">
+                                <ContentPresenter.Resources>
+                                    <Style TargetType="TextBlock" BasedOn="{StaticResource WrapStyle}"/>
+                                </ContentPresenter.Resources>
+                            </ContentPresenter>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- Текст в пузыре, правая версия -->
+        <Style x:Key="BubbleRightStyle" TargetType="ContentControl" BasedOn="{StaticResource BubbleLeftStyle}">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ContentControl">
+                        <Grid Margin="{TemplateBinding Margin}">
+                            <Control Style="{StaticResource Bubble}" Background="DeepSkyBlue" RenderTransformOrigin=".5 0">
+                                <Control.RenderTransform>
+                                    <ScaleTransform ScaleX="-1"/>
+                                </Control.RenderTransform>
+                            </Control>
+                            <ContentPresenter Margin="{TemplateBinding Padding}">
+                                <ContentPresenter.Resources>
+                                    <Style TargetType="TextBlock" BasedOn="{StaticResource WrapStyle}"/>
+                                </ContentPresenter.Resources>
+                            </ContentPresenter>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <ContentControl Style="{StaticResource BubbleLeftStyle}"
+                Height="60" FontSize="20" Content=""/>
+        <ContentControl Style="{StaticResource BubbleLeftStyle}"
+                FontSize="20" Height="60" Content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
+        <ContentControl Style="{StaticResource BubbleRightStyle}"
+                FontSize="20" Height="60" Content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+        <ContentControl Style="{StaticResource BubbleRightStyle}"
+                FontSize="20" Height="60" Content="Hello world!"/>
+        <ContentControl Style="{StaticResource BubbleLeftStyle}"
+                FontSize="20" Height="60" Content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+        <ContentControl Style="{StaticResource BubbleRightStyle}"
+                FontSize="20" Content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." Height="60" />
+    </StackPanel>
+    <!--<Border Background="AliceBlue" Padding="5">
+        <Grid>
+
+            <Border CornerRadius="10"
+                    Padding="15"
+                    Background="Lavender">
+            </Border>
+            <TextBlock VerticalAlignment="Center" 
+                       Text="Hello"
+                       TextWrapping="Wrap"
+                       FontSize="40"
+                       FontFamily="Bernard MT Condensed"
+                       Foreground="Firebrick">
+            </TextBlock>
+            <Image Source="Sherlock.gif" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left"/>
+        </Grid>
+    </Border>-->
 </Window>

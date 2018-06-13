@@ -61,6 +61,7 @@
     <Compile Include="Film%27s Page.xaml.cs">
       <DependentUpon>Film%27s Page.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ForHelper\HelperMessageControl.cs" />
     <Compile Include="Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>
     </Compile>
@@ -91,6 +92,10 @@
     <Compile Include="ViewModels\FilmItemViewModel.cs" />
     <Compile Include="ViewModels\FilmsListViewModel.cs" />
     <Page Include="Film%27s Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ForHelper\HelperMessageControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -161,7 +166,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="1" />
+    <None Include="ForHelper\1" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -184,7 +189,7 @@
     <Content Include="FilmsMedia1\Волк с Уолл-стрит.mp4" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\cinemab.png" />
+    <Resource Include="Images\cinemab.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\person1.png" />
