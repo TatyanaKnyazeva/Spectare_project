@@ -11,7 +11,7 @@ namespace Spectare
         public static FavouriteItemDesignModel item = new FavouriteItemDesignModel();
         public FavouriteItemDesignModel()
         {
-
+            
         }
 
     }

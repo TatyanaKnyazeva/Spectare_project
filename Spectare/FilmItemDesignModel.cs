@@ -8,12 +8,12 @@ namespace Spectare
 {
     public class FilmItemDesignModel : FilmItemViewModel
     {
-        public static FilmItemDesignModel item = new FilmItemDesignModel();
+        public static FilmItemDesignModel item => new FilmItemDesignModel();
 
         public FilmItemDesignModel()
         {
-            FSname = "Halt and Cath fire";
-            Imagepath = "Images/bluebg.png";
+            FSname = "Halt and catch fire";
+            Imagepath = "Images/cinemab.png";
         }
     }
 }

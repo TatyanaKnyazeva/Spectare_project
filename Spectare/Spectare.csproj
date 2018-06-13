@@ -57,12 +57,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="FavouriteItemControl.xaml.cs">
+    <Compile Include="UserControls\FavouriteItemControl.xaml.cs">
       <DependentUpon>FavouriteItemControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="FavouriteItemDesignModel.cs" />
     <Compile Include="FavouriteItemViewModel.cs" />
-    <Compile Include="FavouritesControl.xaml.cs">
+    <Compile Include="UserControls\FavouritesControl.xaml.cs">
       <DependentUpon>FavouritesControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="FavouritesDesignModel.cs" />
@@ -101,11 +101,11 @@
     <Compile Include="UserControls\FilmsListControl.xaml.cs">
       <DependentUpon>FilmsListControl.xaml</DependentUpon>
     </Compile>
-    <Page Include="FavouriteItemControl.xaml">
+    <Page Include="UserControls\FavouriteItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FavouritesControl.xaml">
+    <Page Include="UserControls\FavouritesControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
