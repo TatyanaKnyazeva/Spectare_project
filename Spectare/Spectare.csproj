@@ -57,11 +57,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DesignModels\FilmItemDesignModel.cs" />
+    <Compile Include="FavouriteItemControl.xaml.cs">
+      <DependentUpon>FavouriteItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FavouriteItemDesignModel.cs" />
+    <Compile Include="FavouriteItemViewModel.cs" />
+    <Compile Include="FavouritesControl.xaml.cs">
+      <DependentUpon>FavouritesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FavouritesDesignModel.cs" />
+    <Compile Include="FavouritesViewModel.cs" />
     <Compile Include="Film%27s Page.xaml.cs">
       <DependentUpon>Film%27s Page.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ForHelper\HelperMessageControl.cs" />
+    <Compile Include="FilmItemDesignModel.cs" />
+    <Compile Include="FilmItemViewModel.cs" />
+    <Compile Include="FilmsListDesignModel.cs" />
+    <Compile Include="FilmsListViewModel.cs" />
     <Compile Include="Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>
     </Compile>
@@ -89,13 +101,15 @@
     <Compile Include="UserControls\FilmsListControl.xaml.cs">
       <DependentUpon>FilmsListControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\FilmItemViewModel.cs" />
-    <Compile Include="ViewModels\FilmsListViewModel.cs" />
-    <Page Include="Film%27s Page.xaml">
+    <Page Include="FavouriteItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ForHelper\HelperMessageControl.xaml">
+    <Page Include="FavouritesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Film%27s Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -166,7 +180,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ForHelper\1" />
+    <None Include="1" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -176,20 +190,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Images\Sherlock.gif" />
-    <Resource Include="FilmsMedia1\Великий Гэтсби 1.jpg" />
-    <Resource Include="FilmsMedia1\Великий Гэтсби 2.jpg" />
-    <Resource Include="FilmsMedia1\Великий Гэтсби постер.jpg" />
-    <Content Include="FilmsMedia1\Великий Гэтсби.mp4" />
-    <Resource Include="FilmsMedia1\Волк с Уолл-стрит 1.jpg" />
-    <Resource Include="FilmsMedia1\Волк с Уолл-стрит 2.jpg" />
-    <Resource Include="FilmsMedia1\Волк с Уолл-стрит 3.jpg" />
-    <Resource Include="FilmsMedia1\Волк с Уолл-стрит постер.jpg" />
-    <Content Include="FilmsMedia1\Волк с Уолл-стрит.mp4" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\cinemab.png" />
+    <EmbeddedResource Include="Images\cinemab.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\person1.png" />

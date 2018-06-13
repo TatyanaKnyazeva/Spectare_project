@@ -116,9 +116,7 @@ namespace Spectare
 
             private void Button_LogOut_Click(object sender, RoutedEventArgs e)
             {
-                MainWindow registerWindow = new MainWindow();
-                registerWindow.Show();
-                Close();
+                
             }
 
         private void GoToHelper(object sender, RoutedEventArgs e)

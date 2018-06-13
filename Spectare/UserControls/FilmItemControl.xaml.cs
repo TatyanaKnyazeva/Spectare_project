@@ -24,5 +24,10 @@ namespace Spectare
         {
             InitializeComponent();
         }
+
+        private void imagebutton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
