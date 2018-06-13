@@ -25,7 +25,6 @@ namespace Spectare
             InitializeComponent();
         }
 
-
         //Deleting letters
         static string Trim(string str, char[] chars)
         {

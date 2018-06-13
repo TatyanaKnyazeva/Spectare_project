@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spectare.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,17 +25,16 @@ namespace Spectare
             InitializeComponent();
         }
 
-        //private User _curUser;
-        //    public Settings (User curUser)
-        //    {
-        //        InitializeComponent();
-        //        _curUser = curUser;
-        //        textBoxName.Text = _curUser.Name;
-        //        textBoxSurname.Text = _curUser.Surname;
-        //        textBoxEmail.Text = _curUser.Email;
-        //    }
+        private User _curUser;
+        public Settings(User curUser)
+        {
+            InitializeComponent();
+            _curUser = curUser;
+            textBoxName.Text = _curUser.Name;
+            textBoxEmail.Text = _curUser.Email;
+        }
 
-            private void textBoxSurname_LostFocus(object sender, RoutedEventArgs e)
+        private void textBoxSurname_LostFocus(object sender, RoutedEventArgs e)
             {
                 if (string.IsNullOrEmpty(textBoxSurname.Text.Trim()))
                     fakeTextBoxSurname.Visibility = System.Windows.Visibility.Visible;
@@ -70,54 +70,19 @@ namespace Spectare
                 textBoxEmail.Focus();
             }
 
-            //private void Button_Submit_Click(object sender, RoutedEventArgs e)
-            //{
-            //    emptySurnameMessage.Visibility = System.Windows.Visibility.Collapsed;
-            //    emptyEmailMessage.Visibility = System.Windows.Visibility.Collapsed;
-            //    emptyNameMessage.Visibility = System.Windows.Visibility.Collapsed;
-            //    existingEmailMessage.Visibility = System.Windows.Visibility.Collapsed;
-            //    bool emptyName = string.IsNullOrEmpty(textBoxName.Text.Trim());
-            //    bool emptySurname = string.IsNullOrEmpty(textBoxSurname.Text.Trim());
-            //    bool emptyEmail = string.IsNullOrEmpty(textBoxEmail.Text.Trim());
-            //    if (emptyEmail || emptyEmail || emptySurname)
-            //    {
-            //        if (emptySurname)
-            //            emptySurnameMessage.Visibility = System.Windows.Visibility.Visible;
-            //        if (emptyName)
-            //            emptyNameMessage.Visibility = System.Windows.Visibility.Visible;
-            //        if (emptyEmail)
-            //            emptyEmailMessage.Visibility = System.Windows.Visibility.Visible;
-            //    }
-            //    else
-            //    {
-            //        if (Repository.CanAddUser(textBoxEmail.Text) || _curUser.Email == textBoxEmail.Text)
-            //        {
-            //            _curUser.Name = textBoxName.Text;
-            //            _curUser.Surname = textBoxSurname.Text;
-            //            _curUser.Email = textBoxEmail.Text;
-            //            Repository.RepositorySave();
-            //            MainWindow mainWindow = new MainWindow(_curUser);
-            //            mainWindow.Show();
-            //            Close();
-            //        }
-            //        else
-            //        {
-            //            existingEmailMessage.Visibility = System.Windows.Visibility.Visible;
-            //        }
-            //    }
-            //}
+            private void Button_Back_Click(object sender, RoutedEventArgs e)
+        {
+            MenuWindow menuWindow = new MenuWindow();
+            menuWindow.Show();
+            Close();
+        }
 
-            //private void Button_Back_Click(object sender, RoutedEventArgs e)
-            //{
-            //    MainWindow mainWindow = new MainWindow(_curUser);
-            //    mainWindow.Show();
-            //    Close();
-            //}
-
-            private void Button_LogOut_Click(object sender, RoutedEventArgs e)
-            {
-                
-            }
+        private void Button_LogOut_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.Show();
+            Close();
+        }
 
         private void GoToHelper(object sender, RoutedEventArgs e)
         {
@@ -125,20 +90,6 @@ namespace Spectare
             helperWindow.Show();
             Close();
         }
-
-        //private void Button_DeleteAccount_Click(object sender, RoutedEventArgs e)
-        //{
-        //    ConfirmationWindow confirm = new ConfirmationWindow();
-        //    confirm.ShowDialog();
-        //    if (confirm.DialogResult == true)
-        //    {
-        //        Repository.Users.Remove(Repository.Users.SingleOrDefault(u => u.Email == _curUser.Email));
-        //        Repository.RepositorySave();
-        //        LoginWindow loginWindow = new LoginWindow();
-        //        loginWindow.Show();
-        //        Close();
-        //    }
-        //}
 
         //private void Button_PasswordChange_Click(object sender, RoutedEventArgs e)
         //{
