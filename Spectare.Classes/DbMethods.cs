@@ -24,7 +24,8 @@ namespace Spectare.Classes
             {
                 Name = name,
                 Email = email,
-                Password = GetHash(password)
+                Password = GetHash(password),
+                FavFilms = new List<Film>(),
             };
 
             using (Context context = new Context())

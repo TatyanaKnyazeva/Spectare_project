@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201806111948257_Changing type on filmtype.Designer.cs">
       <DependentUpon>201806111948257_Changing type on filmtype.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806131131028_Сделали ровно 3 кадра из фильма.cs" />
+    <Compile Include="Migrations\201806131131028_Сделали ровно 3 кадра из фильма.Designer.cs">
+      <DependentUpon>201806131131028_Сделали ровно 3 кадра из фильма.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Type.cs" />
@@ -87,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806111948257_Changing type on filmtype.resx">
       <DependentUpon>201806111948257_Changing type on filmtype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806131131028_Сделали ровно 3 кадра из фильма.resx">
+      <DependentUpon>201806131131028_Сделали ровно 3 кадра из фильма.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
