@@ -76,6 +76,8 @@ namespace Spectare
             if (methods.Authorization(emailtextbox.Text, passwordbox.Password))
             {
                 var menuwindow = new MenuWindow(methods);
+                menuwindow.Show();
+                this.Close();
 
             }
             else

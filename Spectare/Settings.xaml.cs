@@ -73,10 +73,9 @@ namespace Spectare
 
             private void Button_Back_Click(object sender, RoutedEventArgs e)
         {
-            MenuWindow menuWindow = new MenuWindow();
-            menuWindow.Show();
-            Close();
+
         }
+        
 
         private void Button_LogOut_Click(object sender, RoutedEventArgs e)
         {
