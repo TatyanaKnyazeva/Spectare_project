@@ -84,17 +84,17 @@
     </Window.Resources>
     <StackPanel>
         <ContentControl Style="{StaticResource BubbleLeftStyle}"
-                Height="60" FontSize="20" Content=""/>
+                Height="80" FontSize="30" Content=""/>
         <ContentControl Style="{StaticResource BubbleLeftStyle}"
-                FontSize="20" Height="60" Content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
+                Height="80" FontSize="30" Content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
         <ContentControl Style="{StaticResource BubbleRightStyle}"
-                FontSize="20" Height="60" Content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                Height="80" FontSize="30" Content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
         <ContentControl Style="{StaticResource BubbleRightStyle}"
-                FontSize="20" Height="60" Content="Hello world!"/>
+                Height="80" FontSize="30" Content="Hello world!"/>
         <ContentControl Style="{StaticResource BubbleLeftStyle}"
-                FontSize="20" Height="60" Content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                Height="80" FontSize="30" Content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
         <ContentControl Style="{StaticResource BubbleRightStyle}"
-                FontSize="20" Content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." Height="60" />
+                Height="80" FontSize="30" Content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
     </StackPanel>
     <!--<Border Background="AliceBlue" Padding="5">
         <Grid>

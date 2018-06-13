@@ -66,16 +66,12 @@
         <!--<Button Grid.Row="4" Grid.ColumnSpan="3" VerticalAlignment="Top" 
                 Margin="10 0 10 20" Width="200" FontSize="20"
                 Click="Button_PasswordChange_Click">Change Password</Button>-->
-        <!--<Button Grid.Row="4" Grid.ColumnSpan="3" VerticalAlignment="Bottom"
-                Margin="0 0 0 10" Width="200" FontSize="20" Click="Button_Submit_Click">Submit</Button>-->
-        <!--<Button Grid.Row="5" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"
-                Margin="5" Height="40" Width="75" Click="Button_Back_Click">Back</Button>-->
+        <Button Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                Margin="5" Height="40" Width="75" Click="Button_Back_Click">Back</Button>
         <Button Grid.Row="5" Grid.Column="0" Style="{StaticResource buttonStyle}" Click="Button_LogOut_Click">Log Out</Button>
-        <!--<Button Grid.Row="5" Grid.Column="0" VerticalAlignment="Bottom"
-                Click="Button_DeleteAccount_Click"
-                Margin="5" Height="40" Width="75" HorizontalAlignment="Center">
-            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Delete Account</TextBlock>
-        </Button>-->
+        <Button Grid.Column="0" Grid.Row="4"  Style="{StaticResource buttonStyle}">
+            Submit
+        </Button>
         <Label  Style="{StaticResource headerTextStyle}" Grid.Row="0" Grid.Column="1">Edit your preferences</Label>
         <Button Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}" Click="GoToHelper"> My helper</Button>
     </Grid>

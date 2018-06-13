@@ -190,7 +190,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Spectare.Classes\Spectare.Classes.csproj">
+      <Project>{2BC8D74F-C6E5-48B2-BB71-92CB96936859}</Project>
+      <Name>Spectare.Classes</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\cinemab.png" />
   </ItemGroup>

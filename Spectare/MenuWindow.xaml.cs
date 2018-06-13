@@ -33,5 +33,13 @@ namespace Spectare
         {
 
         }
+
+        private void GoToSettings(object sender, RoutedEventArgs e)
+        {
+            Settings settings = new Settings();
+            settings.Show();
+            Close();
+        }
+
     }
 }

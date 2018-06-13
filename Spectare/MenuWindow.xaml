@@ -81,7 +81,7 @@
                 </Grid.ColumnDefinitions>
                 <Border Background="#FF418CE6" Margin="0,15"/>
                 <Button Grid.Column="1" Style="{StaticResource TextButton}" Content="Settings" Foreground="White"
-                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15"/>
+                        Click="GoToSettings"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15"/>
             </Grid>
         </Border>
     </Grid>
