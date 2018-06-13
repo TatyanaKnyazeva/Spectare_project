@@ -66,5 +66,23 @@ namespace Spectare.Classes
                 context.SaveChanges();
             }
         }
+
+        public List<Film> GetAllFilms()
+        {
+            using (var context = new Context())
+            {
+                var films = context.Films.Include("Actors").Include("Types").ToList();
+                return films;
+            }
+        }
+
+        public Film GetFilmByName(string Name)
+        {
+            using (var context = new Context())
+            {
+                var film = context.Films.Include("Actors").Include("Types").FirstOrDefault(f => f.Title == Name);
+                return film;
+            }
+        }
     }
 }
