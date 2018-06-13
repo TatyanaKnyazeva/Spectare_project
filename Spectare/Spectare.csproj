@@ -197,9 +197,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\cinemab.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\person1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +207,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\bluebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cinemab.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
