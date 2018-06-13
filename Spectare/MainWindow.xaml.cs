@@ -71,7 +71,7 @@ namespace Spectare
             {
                 textbox3.Visibility = System.Windows.Visibility.Visible;
                 passwordbox.Visibility = System.Windows.Visibility.Collapsed;
-                textbox3.Text = "Password(at least 8 characters)";
+                textbox3.Text = "Password";
                 textbox3.Foreground = Brushes.Silver;
                 textbox3.GotFocus += TextBox_GotFocus;
             }
@@ -114,8 +114,6 @@ namespace Spectare
 
             if ((passwordcharacters <8) && (textbox3.Text!="Password"))
             {
-                
-                fields.Visibility = Visibility.Collapsed;
                 textblockpassw.Visibility = System.Windows.Visibility.Visible;
                 textblockpassw.Foreground = Brushes.Silver;
                 textblockpassw.Text = "password should contain at least 8 charaters";
@@ -131,11 +129,9 @@ namespace Spectare
 
             if (passwordcharacters >= 8 && (textbox2.Text.Contains("@mail.ru") || textbox2.Text.Contains("@gmail.com")))
             {
-
-                
                 string name = textbox1.Text;
                 string email = textbox2.Text;
-                string password = PasswordHelpers.GetHash(passwordbox.Password);
+                string password =passwordbox.Password;
                 try
                 {
                     methods.Registration(name, email, password);
