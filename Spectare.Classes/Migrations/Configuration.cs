@@ -19,8 +19,9 @@ namespace Spectare.Classes.Migrations
         protected override void Seed(Context context)
         {
             Excel.Application ObjWorkExcel = new Excel.Application();
-            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Spectare.xlsx");
-            Excel.Workbook ObjWorkBook = ObjWorkExcel.Workbooks.Open(path, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            //string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Spectare.xlsx");
+
+            Excel.Workbook ObjWorkBook = ObjWorkExcel.Workbooks.Open("D:/Ñ#/Spectare.UI/Spectare.Classes/Data/Spectare.xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             Excel.Worksheet ObjWorkSheet1 = (Excel.Worksheet)ObjWorkBook.Sheets[1];
             var lastCell1 = ObjWorkSheet1.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell);
             int lastRow1 = (int)lastCell1.Row;
@@ -83,12 +84,13 @@ namespace Spectare.Classes.Migrations
                     PosterLink = list2[2, j],
                     TrailerLink = list2[3, j],
                     WebLink = list2[4, j],
-                    PhotoLinks = new List<string>(),
+                    PhotoLink1 = list2[5, j],
+                    PhotoLink2 = list2[6, j],
+                    PhotoLink3 = list2[7, j],
                     Actors = new List<Actor>(),
                     Types = new List<FilmType>(),
+
                 };
-                for (int i = 5; i < lastColumn2; i++)
-                    if (list2[i, j] != "") film.PhotoLinks.Add(list2[i, j]);
                 films.Add(film);
             }
 
