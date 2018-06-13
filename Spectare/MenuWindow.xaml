@@ -51,17 +51,6 @@
                         HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15" Margin="0,15"/>
             </Grid>
         </Border>
-        <Border Grid.Row="3">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="123*"/>
-                </Grid.ColumnDefinitions>
-                <Border Background="#FF418CE6" Margin="0,15"/>
-                <Button Grid.Column="1" Style="{StaticResource TextButton}" Content="Watch List" Foreground="White"
-                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15"/>
-            </Grid>
-        </Border>
         <Border Grid.Row="5">
             <Grid>
                 <Grid.ColumnDefinitions>

@@ -6,9 +6,6 @@
              xmlns:local="clr-namespace:Spectare"
              mc:Ignorable="d" 
              d:DesignHeight="62" d:DesignWidth="567">
-    <UserControl.Resources>
-        <local:FavouriteItemDesignModel x:Key="FavouriteItem"/>
-    </UserControl.Resources>
     <Grid Background="#FFFFF9F9" d:DataContext="{x:Static local:FavouriteItemDesignModel.item}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40*"/>
@@ -20,7 +17,7 @@
             <RowDefinition Height="19*"/>
             <RowDefinition Height="12*"/>
         </Grid.RowDefinitions>
-        <Image Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"/>
+        <Image Grid.Column="1" Source="{Binding ImagePath}" Grid.Row="0" Grid.RowSpan="2"/>
         <TextBlock Grid.Column="2" Text="{Binding Title}"/>
         <TextBlock Grid.Column="2" Grid.Row="1" Text="{Binding Genre}"/>
     </Grid>
