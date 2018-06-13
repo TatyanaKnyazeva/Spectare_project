@@ -119,26 +119,33 @@ namespace Spectare
                 
             }
 
-            //private void Button_DeleteAccount_Click(object sender, RoutedEventArgs e)
-            //{
-            //    ConfirmationWindow confirm = new ConfirmationWindow();
-            //    confirm.ShowDialog();
-            //    if (confirm.DialogResult == true)
-            //    {
-            //        Repository.Users.Remove(Repository.Users.SingleOrDefault(u => u.Email == _curUser.Email));
-            //        Repository.RepositorySave();
-            //        LoginWindow loginWindow = new LoginWindow();
-            //        loginWindow.Show();
-            //        Close();
-            //    }
-            //}
-
-            //private void Button_PasswordChange_Click(object sender, RoutedEventArgs e)
-            //{
-            //    var passwordChangeWindow = new PasswordChangeWindow(_curUser);
-            //    passwordChangeWindow.ShowDialog();
-            //}
+        private void GoToHelper(object sender, RoutedEventArgs e)
+        {
+          Helper helperWindow = new Helper();
+            helperWindow.Show();
+            Close();
         }
+
+        //private void Button_DeleteAccount_Click(object sender, RoutedEventArgs e)
+        //{
+        //    ConfirmationWindow confirm = new ConfirmationWindow();
+        //    confirm.ShowDialog();
+        //    if (confirm.DialogResult == true)
+        //    {
+        //        Repository.Users.Remove(Repository.Users.SingleOrDefault(u => u.Email == _curUser.Email));
+        //        Repository.RepositorySave();
+        //        LoginWindow loginWindow = new LoginWindow();
+        //        loginWindow.Show();
+        //        Close();
+        //    }
+        //}
+
+        //private void Button_PasswordChange_Click(object sender, RoutedEventArgs e)
+        //{
+        //    var passwordChangeWindow = new PasswordChangeWindow(_curUser);
+        //    passwordChangeWindow.ShowDialog();
+        //}
+    }
 
     }
 
