@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:Spectare"
              mc:Ignorable="d" 
              d:DesignHeight="434" d:DesignWidth="567">
-    <Grid Background="#FFFFF9F9">
+    
+    <Grid Background="#FFFFF9F9" d:DataContext="{x:Static local:FavouritesDesignModel.Items}">
         <ScrollViewer Visibility="Hidden">
             <ItemsControl>
                 <ItemsControl.ItemTemplate>

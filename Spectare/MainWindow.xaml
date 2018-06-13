@@ -8,7 +8,7 @@
         Title="MainWindow" Height="507.765" Width="724.659">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="images/cinemab.png"/>
+            <ImageBrush ImageSource="Images/cinemab.png"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="323*"/>
