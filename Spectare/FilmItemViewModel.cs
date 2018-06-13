@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Spectare.ViewModels
+namespace Spectare
 {
     public class FilmItemViewModel
     {
-        public string ImagePath { get; set; }
-        public string FSName { get; set; }
+        public string Imagepath { get; set; }
+        public string FSname {get;set;}
     }
 }

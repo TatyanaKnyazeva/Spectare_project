@@ -57,10 +57,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DesignModels\FilmItemDesignModel.cs" />
+    <Compile Include="FavouriteItemControl.xaml.cs">
+      <DependentUpon>FavouriteItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FavouriteItemDesignModel.cs" />
+    <Compile Include="FavouriteItemViewModel.cs" />
+    <Compile Include="FavouritesControl.xaml.cs">
+      <DependentUpon>FavouritesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FavouritesDesignModel.cs" />
+    <Compile Include="FavouritesViewModel.cs" />
     <Compile Include="Film%27s Page.xaml.cs">
       <DependentUpon>Film%27s Page.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FilmItemDesignModel.cs" />
+    <Compile Include="FilmItemViewModel.cs" />
+    <Compile Include="FilmsListDesignModel.cs" />
+    <Compile Include="FilmsListViewModel.cs" />
     <Compile Include="Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>
     </Compile>
@@ -88,8 +101,14 @@
     <Compile Include="UserControls\FilmsListControl.xaml.cs">
       <DependentUpon>FilmsListControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\FilmItemViewModel.cs" />
-    <Compile Include="ViewModels\FilmsListViewModel.cs" />
+    <Page Include="FavouriteItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FavouritesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Film%27s Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -170,7 +189,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DesignModels\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\cinemab.png" />
   </ItemGroup>

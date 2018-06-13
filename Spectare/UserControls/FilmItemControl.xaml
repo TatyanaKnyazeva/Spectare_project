@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:Spectare"
              mc:Ignorable="d" 
              d:DesignHeight="186" d:DesignWidth="189">
-    <Grid Background="White" d:DataContext="{x:Static local:FilmsListItemdesignModel.item}">
+    
+    <Grid Background="White" d:DataContext="{StaticResource FilmItemDesignModel}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="30*"/>
@@ -17,8 +18,15 @@
             <RowDefinition Height="55*"/>
             <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding FSName}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-        <Image Grid.Column="1" Grid.Row="1" Source="{Binding ImagePath}"/>
-
+        <TextBlock Grid.Column="1" Grid.Row="2" Margin="5" Text="{Binding FSName}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        <Button Name="imagebutton" Grid.Column="1" Grid.Row="1" Margin="5" Click="imagebutton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="Transparent" >
+                        <Image Source="{Binding Imagepath}"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </UserControl>

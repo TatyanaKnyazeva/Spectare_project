@@ -116,9 +116,7 @@ namespace Spectare
 
             private void Button_LogOut_Click(object sender, RoutedEventArgs e)
             {
-                Registration registerWindow = new Registration();
-                registerWindow.Show();
-                Close();
+                
             }
 
             //private void Button_DeleteAccount_Click(object sender, RoutedEventArgs e)

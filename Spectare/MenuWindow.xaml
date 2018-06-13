@@ -8,10 +8,10 @@
         Title="MenuWindow" Height="507.765" Width="724.659">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150*"/>
-            <ColumnDefinition Width="69*"/>
-            <ColumnDefinition Width="106*"/>
-            <ColumnDefinition Width="392*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="128*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="43*"/>
@@ -62,23 +62,27 @@
                         HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15"/>
             </Grid>
         </Border>
-        <Border Grid.Row="4">
+        <Border Grid.Row="5">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="22*"/>
-                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="123*"/>
                 </Grid.ColumnDefinitions>
-
-
+                <Border Background="#FF418CE6" Margin="0,15"/>
+                <Button Grid.Column="1" Style="{StaticResource TextButton}" Content="Game" Foreground="White"
+                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15"/>
             </Grid>
         </Border>
-
-
-        <Button Grid.Row="5" Content="Game"/>
-        <Button Grid.Row="6" Content="Settings"/>
-
-
-
+        <Border Grid.Row="6">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="123*"/>
+                </Grid.ColumnDefinitions>
+                <Border Background="#FF418CE6" Margin="0,15"/>
+                <Button Grid.Column="1" Style="{StaticResource TextButton}" Content="Settings" Foreground="White"
+                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15"/>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace Spectare
 {
     /// <summary>
-    /// Логика взаимодействия для FilmItemControl.xaml
+    /// Логика взаимодействия для FavouritesControl.xaml
     /// </summary>
-    public partial class FilmItemControl : UserControl
+    public partial class FavouritesControl : UserControl
     {
-        public FilmItemControl()
+        public FavouritesControl()
         {
             InitializeComponent();
-        }
-
-        private void imagebutton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
