@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Actor.cs" />
     <Compile Include="Context.cs" />
+    <Compile Include="DbMethods.cs" />
     <Compile Include="Film.cs" />
     <Compile Include="Migrations\201806100835367_Initial.cs" />
     <Compile Include="Migrations\201806100835367_Initial.Designer.cs">
