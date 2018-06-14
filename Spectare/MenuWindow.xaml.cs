@@ -29,7 +29,7 @@ namespace Spectare
 
         private void ButtonFavorites_Click(object sender, RoutedEventArgs e)
         {
-            var favouriteswindow = new FavouritesWindow(methods.User.FavFilms);
+            var favouriteswindow = new FavouritesWindow(methods);
             favouriteswindow.Show();
             Close();
         }

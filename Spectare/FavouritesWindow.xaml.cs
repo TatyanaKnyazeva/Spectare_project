@@ -22,10 +22,24 @@ namespace Spectare
     {
         List<Film> films = new List<Film>();
 
-        public FavouritesWindow(List<Film> _favFilms)
+        public FavouritesWindow(DbMethods _methods)
         {
             InitializeComponent();
-            films = _favFilms;
+
+            films = _methods.User.FavFilms;
+
+            dataGridFavourites.ItemsSource = films;
+        }
+
+
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonBack_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
