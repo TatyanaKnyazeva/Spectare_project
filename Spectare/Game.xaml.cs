@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spectare.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Spectare
 {
@@ -19,9 +21,22 @@ namespace Spectare
     /// </summary>
     public partial class Game : Window
     {
-        public Game()
+        DbMethods methods = new DbMethods();
+        public Game(DbMethods _methods)
         {
             InitializeComponent();
+            methods = _methods;
+            foreach(var f in methods.GetAllFilms())
+            {
+
+            }
+        }
+
+        
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

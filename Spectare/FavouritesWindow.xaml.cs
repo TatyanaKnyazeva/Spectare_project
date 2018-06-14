@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
 
 namespace Spectare
 {
@@ -46,7 +47,10 @@ namespace Spectare
 
         private void Row_DoubleClick(object sender, MouseButtonEventArgs e)
         {
-            
+            Film film = (Film)dataGridFavourites.SelectedItems[0];
+            var favouriteswindow = new Film_s_Page(methods,film);
+            favouriteswindow.Show();
+            Close();
         }
     }
 }
