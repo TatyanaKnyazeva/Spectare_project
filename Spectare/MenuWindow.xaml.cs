@@ -45,6 +45,12 @@ namespace Spectare
             settings.Show();
             Close();
         }
+        private void GoToHelper(object sender, RoutedEventArgs e)
+        {
+            Helper helper = new Helper();
+            helper.Show();
+            Close();
+        }
 
     }
 }

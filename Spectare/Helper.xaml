@@ -10,13 +10,17 @@
         <Grid.Background>
             <ImageBrush ImageSource="WP.jpg"></ImageBrush>
         </Grid.Background>
-        <TextBlock Margin="5" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center">Your question:</TextBlock>
-        <TextBox Height="25" Name="textBoxNumber" Grid.Column="1" Grid.Row="4" ></TextBox>
-        <Button x:Name="buttonFind" Grid.Row="4" Grid.Column="1"  VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="100" Click="ButtonFind_Click" Content="Help!"/>
+        <TextBlock VerticalAlignment="Top" FontFamily="Segoe UI Semibold" Margin="5" HorizontalAlignment="Center" Grid.Row="4" FontWeight="SemiBold" Foreground="#FFE7E8EC">
+            <TextBlock.Background>
+                <ImageBrush/>
+            </TextBlock.Background>Your question:</TextBlock>
+        <TextBox VerticalAlignment="Top" Background="Bisque" Height="25" Name="textBoxNumber" Grid.Column="1" Grid.Row="4" ></TextBox>
+        <Button Style="{StaticResource buttonStyle}" x:Name="buttonExit" Grid.Row="0" Grid.Column="2"  VerticalAlignment="Top" HorizontalAlignment="Right" Click="ButtonExit_Click" Content="Exit"/>
+        <Button HorizontalAlignment="Center" Style="{StaticResource buttonStyle}" x:Name="buttonHelp" Grid.Row="4" Grid.Column="1"  VerticalAlignment="Bottom" Click="ButtonHelp_Click" Content="Help!"/>
         <Image Source="Sherlock.gif" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Left"></Image>
-        <Rectangle RadiusX="10" RadiusY="15" Fill="Beige" Grid.Column="1" Grid.Row="2"/>
-        <TextBox BorderThickness="0" Grid.Column="1" Grid.Row="2" Background="Transparent" Name="TB2" Margin="5,5"></TextBox>
-        <Polygon Fill="Beige" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Bottom" Points="-1, 52, -20, 5, 15, 50">
+        <Rectangle RadiusX="10" RadiusY="15" Fill="Bisque" Grid.Column="1" Grid.Row="2"/>
+        <TextBox TextWrapping="Wrap" BorderThickness="0" Grid.Column="1" Grid.Row="2" Background="Transparent" Name="TB2" Margin="5,5"></TextBox>
+        <Polygon Fill="Bisque" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Bottom" Points="-1, 52, -20, 5, 15, 50">
             <Polygon.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

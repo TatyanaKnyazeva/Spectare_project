@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spectare.Classes;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -26,7 +27,13 @@ namespace Spectare
         {
             InitializeComponent();
         }
-        private void ButtonFind_Click(object sender, RoutedEventArgs e)
+        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        {
+            MenuWindow menuwindow = new MenuWindow();
+            menuwindow.Show();
+            this.Close();
+        }
+        private void ButtonHelp_Click(object sender, RoutedEventArgs e)
         {
             string q = textBoxNumber.Text;
             TB2.Text = Ans(q);
