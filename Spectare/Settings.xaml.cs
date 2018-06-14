@@ -26,18 +26,7 @@ namespace Spectare
             InitializeComponent();
             methods = _methods;
         }
-
-        private User _curUser;
-        public Settings(User curUser)
-        {
-            InitializeComponent();
-            _curUser = curUser;
-            TBName.Text = _curUser.Name;
-            TBEmail.Text = _curUser.Email;
-            TBPassword.Text = _curUser.Password;
-        }
-
-        
+ 
         private void TBName_GotFocus(object sender, RoutedEventArgs e)
         {
             if (TBName.Text == "Enter new name")
@@ -48,13 +37,7 @@ namespace Spectare
             if (TBEmail.Text == "Enter new email")
                 TBEmail.Text = "";
         }
-        private void TBPassword_GotFocus(object sender, RoutedEventArgs e)
-        {
-            if (TBPassword.Text == "Enter new password")
-                TBPassword.Text = "";
-        }
-
-
+        
         private void TBName_LostFocus(object sender, RoutedEventArgs e)
         {
             if (TBName.Text == "")
@@ -65,11 +48,7 @@ namespace Spectare
             if (TBEmail.Text == "")
                 TBEmail.Text = "Enter new email";
         }
-        private void TBPassword_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (TBPassword.Text == "")
-                TBPassword.Text = "Enter new password";
-        }
+        
             private void Button_Back_Click(object sender, RoutedEventArgs e)
         {
             MenuWindow menuwindow = new MenuWindow(methods);
@@ -83,11 +62,49 @@ namespace Spectare
             loginWindow.Show();
             Close();
         }
-        private void Editing(object sender, RoutedEventArgs e)
-        {
 
+        private void NameChange_Click(object sender, RoutedEventArgs e)
+        {
+            if (TBName.Text != "Enter new name" && TBName.Text != "")
+                methods.ChangeName(TBName.Text);
+            else
+                MessageBox.Show("enter new name");
+        }
+
+        private void EmailChange_Click(object sender, RoutedEventArgs e)
+        {
+            if (TBEmail.Text != "Enter new email" && TBEmail.Text != "")
+                methods.ChangeEmail(TBEmail.Text);
+            else
+                MessageBox.Show("Enter new email");
+             
+        }
+
+        private void PasswordChange_Click(object sender, RoutedEventArgs e)
+        {
+            if(passwordtextbox.Text!="enter new password" && passwordtextbox.Text!="" && passwordbox.Password != "")
+            {
+                methods.Changepassword(passwordbox.Password)
+            }
+            else
+            {
+                MessageBox.Show("Enter password");
+            }
+        }
+
+        private void passwordtextbox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            passwordtextbox.Visibility = System.Windows.Visibility.Collapsed;
+            passwordbox.Visibility = System.Windows.Visibility.Visible;
+            passwordbox.Focus();
+        }
+
+        private void passwordbox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            passwordtextbox.Visibility = System.Windows.Visibility.Collapsed;
+            passwordbox.Visibility = System.Windows.Visibility.Visible;
+            passwordbox.Focus();
         }
     }
-
-    }
+}
 

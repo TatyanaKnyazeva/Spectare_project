@@ -48,7 +48,7 @@ namespace Spectare
 
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
-            Settings settings = new Settings();
+            Settings settings = new Settings(methods);
             settings.Show();
             Close();
         }

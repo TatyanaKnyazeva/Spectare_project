@@ -87,5 +87,30 @@ namespace Spectare.Classes
                 return film;
             }
         }
+
+        public void ChangeName(string newname)
+        {
+            using(var context=new Context())
+            {
+                User.Name.(User.Name,newname);
+                context.SaveChanges();
+            }
+        }
+        public void ChangeEmail(string newemail)
+        {
+            using (var context = new Context())
+            {
+                User.Email.Replace(User.Email, newemail);
+                context.SaveChanges();
+            }
+        }
+        public void Changepassword(string newpassword)
+        {
+            using (var context = new Context())
+            {
+                User.Password.Replace(User.Password,GetHash(newpassword));
+                context.SaveChanges();
+            }
+        }
     }
 }

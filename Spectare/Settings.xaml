@@ -12,6 +12,10 @@
         </Grid.Background>
         <Border Margin="25" Background="AliceBlue" CornerRadius="5">
             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -20,9 +24,9 @@
                     <RowDefinition/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+                <Button x:Name="NameChange" Click="NameChange_Click" Grid.Column="1" Grid.Row="1"  Style="{StaticResource TextButton}" Content="Change Name" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Button x:Name="EmailChange" Click="EmailChange_Click" Grid.Column="1" Grid.Row="2" Style="{StaticResource TextButton}" Content="Change Email" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Button x:Name="PasswordChange" Click="PasswordChange_Click" Grid.Column="1" Grid.Row="3" Style="{StaticResource TextButton}" Content="Change Password" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Label Foreground="CornflowerBlue" FontSize="30" Style="{StaticResource headerTextStyle}" Grid.Row="0" Grid.Column="0">Edit your information</Label>
                 <TextBox Style="{StaticResource headerTextStyle}" Grid.Row="1" Height="25" Width="250" Text="Enter new name" Name="TBName"
             GotFocus="TBName_GotFocus" LostFocus="TBName_LostFocus" 
@@ -30,15 +34,17 @@
                 <TextBox Style="{StaticResource headerTextStyle}" Grid.Row="2" Height="25" Width="250" Text="Enter new email" Name="TBEmail"
          GotFocus="TBEmail_GotFocus" LostFocus="TBEmail_LostFocus" 
         ></TextBox>
-                <TextBox Style="{StaticResource headerTextStyle}" Grid.Row="3" Height="25" Width="250" Text="Enter new password" Name="TBPassword"
-            GotFocus="TBPassword_GotFocus" LostFocus="TBPassword_LostFocus" 
-        ></TextBox>
+                <TextBox Name="passwordtextbox"  Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" FontSize="12" 
+                                 GotFocus="passwordtextbox_GotFocus" Margin="60 0" Text="Enter new password"/>
+                <PasswordBox Name="passwordbox" Grid.Column="1" BorderThickness="0 0 0 0" Margin="60 0" LostFocus="passwordbox_LostFocus"
+                                     VerticalAlignment="Center" Visibility="Collapsed"/>
+
+
+
                 <Button Background="CornflowerBlue" Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right"
                 Margin="5" Height="40" Width="75" Click="Button_Back_Click">Back</Button>
                 <Button  Background="CornflowerBlue" Grid.Row="5" Grid.Column="0" Style="{StaticResource buttonStyle}" Click="Button_LogOut_Click">Log Out</Button>
-                <Button Background="CornflowerBlue" Grid.Column="0" Grid.Row="4"  Style="{StaticResource buttonStyle}" Click="Editing">
-                    Submit
-                </Button>
+                
             </Grid>
         </Border>
     </Grid>
