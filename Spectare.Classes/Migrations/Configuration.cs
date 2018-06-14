@@ -21,7 +21,7 @@ namespace Spectare.Classes.Migrations
             Excel.Application ObjWorkExcel = new Excel.Application();
             //string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Spectare.xlsx");
 
-            Excel.Workbook ObjWorkBook = ObjWorkExcel.Workbooks.Open("C:/Users/Natasha_S/source/repos/Spectare_project/Spectare.Classes/Data/Spectare.xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            Excel.Workbook ObjWorkBook = ObjWorkExcel.Workbooks.Open("D:/Ñ#/Spectare.UI/Spectare.Classes/Data/Spectare.xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             Excel.Worksheet ObjWorkSheet1 = (Excel.Worksheet)ObjWorkBook.Sheets[1];
             var lastCell1 = ObjWorkSheet1.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell);
             int lastRow1 = (int)lastCell1.Row;
