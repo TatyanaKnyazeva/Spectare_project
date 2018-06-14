@@ -55,6 +55,7 @@ namespace Spectare.Classes
             using (var context = new Context())
             {
                 context.Users.Include("FavFilms").FirstOrDefault(u => u.Name == user.Name).FavFilms.Add(film);
+                User.FavFilms.Add(film);
                 context.SaveChanges();
             }
         }
@@ -64,6 +65,7 @@ namespace Spectare.Classes
             using (var context = new Context())
             {
                 context.Users.Include("FavFilms").FirstOrDefault(u => u.Name == user.Name).FavFilms.Remove(film);
+                User.FavFilms.Remove(film);
                 context.SaveChanges();
             }
         }
