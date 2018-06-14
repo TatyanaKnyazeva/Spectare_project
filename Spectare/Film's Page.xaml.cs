@@ -55,5 +55,12 @@ namespace Spectare
             DeleteFromFavourites.Visibility = Visibility.Collapsed;
             AddtoFavourites.Visibility = Visibility.Visible;
         }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            MenuWindow menuwindow = new MenuWindow(methods);
+            menuwindow.Show();
+            Close();
+        }
     }
 }
