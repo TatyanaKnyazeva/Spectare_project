@@ -1,20 +1,6 @@
 ﻿using Spectare.Classes;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Spectare
 {
@@ -37,18 +23,14 @@ namespace Spectare
         }
         private void ButtonHelp_Click(object sender, RoutedEventArgs e)
         {
-
            string q = textBoxNumber.Text;
             TB2.Text = Ans(q);
             textBoxNumber.Clear();
-                
-            
         }
-        //Deleting letters
         static string Trim(string str, char[] chars)
         {
-            string strA = str; //Копирование строки
-            for (int i = 0; i < chars.Length; i++) //Удаление строки
+            string strA = str; 
+            for (int i = 0; i < chars.Length; i++) 
             {
                 strA = strA.Replace(char.ToString(chars[i]), "");
             }
