@@ -20,12 +20,28 @@ namespace Spectare
     /// </summary>
     public partial class FavouritesWindow : Window
     {
-        List<Film> films = new List<Film>();
+        DbMethods methods = new DbMethods();
 
-        public FavouritesWindow(List<Film> _favFilms)
+        public FavouritesWindow(DbMethods _methods)
         {
             InitializeComponent();
-            films = _favFilms;
+
+            methods = _methods;
+
+            dataGridFavourites.ItemsSource = methods.User.FavFilms;
+        }
+
+
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonBack_Click(object sender, RoutedEventArgs e)
+        {
+            var menuwindow = new MenuWindow(methods);
+            menuwindow.Show();
+            Close();
         }
     }
 }
