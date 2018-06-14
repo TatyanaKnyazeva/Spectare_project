@@ -35,7 +35,8 @@ namespace Spectare
                 Actors.Text += a.Name;
                 if(a!=film.Actors.Last())
                     Actors.Text +=",";
-            }   
+            }
+            
         }
 
         private void AddtoFavourites_Click(object sender, RoutedEventArgs e)
