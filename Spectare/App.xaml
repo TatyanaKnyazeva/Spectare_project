@@ -14,25 +14,6 @@
             <Setter Property="Label.FontSize" Value="20"></Setter>
             <Setter Property="Label.Foreground" Value="#0066cc"></Setter>
         </Style>
-        <!--Label style для надписей Label (Style="{StaticResource textStyle}")-->
-        <Style x:Key="textStyle" TargetType="{x:Type Label}">
-            <Setter Property="VerticalAlignment" Value="Top"/>
-            <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Margin" Value="0,0,0,5"/>
-            <Setter Property="FontFamily" Value="Trebuchet MS"/>
-            <Setter Property="FontSize" Value="20"/>
-        </Style>
-
-        <!--List header text style для заголовка списка Label (Style="{StaticResource listHeaderTextStyle}")-->
-        <Style x:Key="listHeaderTextStyle" TargetType="{x:Type Label}">
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="FontFamily" Value="Trebuchet MS"/>
-            <Setter Property="FontSize" Value="20"/>
-
-        </Style>
         <!--Button style для button (Style="{StaticResource buttonStyle}")-->
         <Style x:Key="buttonStyle" TargetType="{x:Type Button}">
             <Setter Property="Width" Value="125"/>
