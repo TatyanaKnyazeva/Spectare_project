@@ -26,6 +26,7 @@ namespace Spectare
         {
             InitializeComponent();
             methods = _methods;
+            
         }
 
         

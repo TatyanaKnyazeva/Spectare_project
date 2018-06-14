@@ -40,13 +40,13 @@ namespace Spectare
             Uri imageuri = new Uri(stringpath, UriKind.Relative);
             BitmapImage imagebitmap = new BitmapImage(imageuri);
             Poster.Source = imagebitmap;
-            if (methods.User.FavFilms.Any(f => f.Title == film.Title))
+            if (methods.User.FavFilms.Any(f => f.Title == film.Title)==true)
             {
                 AddtoFavourites.Visibility = Visibility.Collapsed;
                 DeleteFromFavourites.Visibility = Visibility.Visible;
             }
 
-            if (methods.User.FavFilms.Any(f => f.Title == film.Title))
+            if (methods.User.FavFilms.Any(f => f.Title == film.Title)==false)
             {
                 AddtoFavourites.Visibility = Visibility.Visible;
                 DeleteFromFavourites.Visibility = Visibility.Collapsed;
