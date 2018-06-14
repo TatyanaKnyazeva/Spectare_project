@@ -220,5 +220,11 @@
     <Resource Include="Images\Волк с Уолл-стрит 3.jpg" />
     <Resource Include="Images\Волк с Уолл-стрит постер.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sherlock.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WP.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -24,7 +26,11 @@ namespace Spectare
         {
             InitializeComponent();
         }
-
+        private void ButtonFind_Click(object sender, RoutedEventArgs e)
+        {
+            string q = textBoxNumber.Text;
+            TB2.Text = Ans(q);
+        }
         //Deleting letters
         static string Trim(string str, char[] chars)
         {
@@ -35,8 +41,6 @@ namespace Spectare
             }
             return strA;
         }
-        //Generation of answer
-
         static string Ans(string q)
         {
             string tr = ")(:^=!@#$%&*';:><.,/?",
@@ -44,7 +48,6 @@ namespace Spectare
             q = q.ToLower();
             q = Trim(q, tr.ToCharArray());
             string[] baza = File.ReadAllLines("../../1");
-            //Searching
             for (int i = 0; i < baza.Length; i += 2)
             {
                 if (q == baza[i])
@@ -55,15 +58,6 @@ namespace Spectare
 
             }
             return ans;
-        }
-        public static void In()
-        {
-            while (true)
-            {
-                Console.Write("");
-                string q = Console.ReadLine();
-                Console.WriteLine("" + Ans(q) + "\n");
-            }
         }
     }
 }
