@@ -27,22 +27,13 @@ namespace Spectare
             methods = _methods;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void FavouritesButton_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void helperButton_Click(object sender, RoutedEventArgs e)
-        {
-            Helper helper = new Helper();
-            helper.Show();
+            var favouriteswindow = new FavouritesWindow(methods);
+            favouriteswindow.Show();
             Close();
         }
+
         private void GoToHelper(object sender, RoutedEventArgs e)
         {
             Helper helper = new Helper(methods);
@@ -55,6 +46,16 @@ namespace Spectare
             Game game = new Game();
             game.Show();
             Close();
+        }
+
+        private void FilmsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GoToSettings(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
