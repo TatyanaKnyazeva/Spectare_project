@@ -47,7 +47,7 @@ namespace Spectare
             {
                 f = films[0];
                 films.Remove(f);
-                if (films == null)
+                if (films.Count == 0)
                 {
                     MessageBox.Show("Вы победили! Поздравляем!!!");
                     MenuWindow menuwindow = new MenuWindow(methods);
@@ -65,7 +65,7 @@ namespace Spectare
             }
             else
             {
-
+                MessageBox.Show("Ошибка, попробуйте еще раз((( Учтите, что названия нужно вводить на русском");
             }
         }
     }
