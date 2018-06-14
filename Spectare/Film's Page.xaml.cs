@@ -36,7 +36,10 @@ namespace Spectare
                 if(a!=film.Actors.Last())
                     Actors.Text +=",";
             }
-            
+            string stringpath = film.PosterLink;
+            Uri imageuri = new Uri(stringpath, UriKind.Relative);
+            BitmapImage imagebitmap = new BitmapImage(imageuri);
+            Poster.Source = imagebitmap;
         }
 
         private void AddtoFavourites_Click(object sender, RoutedEventArgs e)
