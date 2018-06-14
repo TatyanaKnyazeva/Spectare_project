@@ -131,7 +131,7 @@ namespace Spectare
             {
                 string name = textbox1.Text;
                 string email = textbox2.Text;
-                string password =passwordbox.Password;
+                string password = passwordbox.Password;
                 try
                 {
                     methods.Registration(name, email, password);
