@@ -23,13 +23,15 @@ namespace Spectare
     /// </summary>
     public partial class Helper : Window
     {
-        public Helper()
+        DbMethods methods = new DbMethods();
+        public Helper(DbMethods _methods)
         {
             InitializeComponent();
+            methods = _methods;
         }
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
         {
-            MenuWindow menuwindow = new MenuWindow();
+            MenuWindow menuwindow = new MenuWindow(methods);
             menuwindow.Show();
             this.Close();
         }
