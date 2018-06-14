@@ -68,6 +68,9 @@
     <Compile Include="FavouriteItemViewModel.cs" />
     <Compile Include="FavouritesDesignModel.cs" />
     <Compile Include="FavouritesViewModel.cs" />
+    <Compile Include="FavouritesWindow.xaml.cs">
+      <DependentUpon>FavouritesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Film%27s Page.xaml.cs">
       <DependentUpon>Film%27s Page.xaml</DependentUpon>
     </Compile>
@@ -102,6 +105,10 @@
     <Compile Include="UserControls\FilmsListControl.xaml.cs">
       <DependentUpon>FilmsListControl.xaml</DependentUpon>
     </Compile>
+    <Page Include="FavouritesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Film%27s Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -212,6 +219,12 @@
     <Resource Include="Images\Волк с Уолл-стрит 2.jpg" />
     <Resource Include="Images\Волк с Уолл-стрит 3.jpg" />
     <Resource Include="Images\Волк с Уолл-стрит постер.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sherlock.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WP.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

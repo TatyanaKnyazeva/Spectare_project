@@ -47,21 +47,8 @@
                     <ColumnDefinition Width="123*"/>
                 </Grid.ColumnDefinitions>
                 <Border Background="#FF418CE6" Margin="0,15"/>
-                <Button x:Name="FavouritesButton" Grid.Column="1" Style="{StaticResource TextButton}" Content="Favourites" Foreground="White"
-                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15" Margin="0,15"
-                        Click="FavouritesButton_Click"/>
-            </Grid>
-        </Border>
-        <Border Grid.Row="3">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="123*"/>
-                </Grid.ColumnDefinitions>
-                <Border Background="#FF418CE6" Margin="0,15"/>
-                <Button x:Name="helperButton" Grid.Column="1" Style="{StaticResource TextButton}" Content="Helper" Foreground="White"
-                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15" Margin="0,15" 
-                        Click="helperButton_Click"/>
+                <Button Grid.Column="1" Style="{StaticResource TextButton}" Content="Favourites" Foreground="White"
+                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15" Margin="0,15"/>
             </Grid>
         </Border>
         <Border Grid.Row="4">

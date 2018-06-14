@@ -9,7 +9,7 @@ namespace Spectare.Classes
 {
     public class DbMethods
     {
-        User _user;
+        public User User { get; set; }
 
         public static string GetHash(string password)
         {
@@ -40,10 +40,10 @@ namespace Spectare.Classes
             using (var context = new Context())
             {
                 password = GetHash(password);
-                var user = context.Users.Include("FavFilms").FirstOrDefault(u => u.Email == email && u.Password == password);
+                var user = context.Users.Include("FavFilms").Include("FavFilms.Actors").Include("FavFilms.Types").FirstOrDefault(u => u.Email == email && u.Password == password);
                 if (user != null)
                 {
-                    _user = user;
+                    User = user;
                     return true;
                 }
                 return false;
