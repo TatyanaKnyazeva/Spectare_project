@@ -84,12 +84,6 @@ namespace Spectare
             Close();
         }
 
-        private void GoToHelper(object sender, RoutedEventArgs e)
-        {
-          Helper helperWindow = new Helper();
-            helperWindow.Show();
-            Close();
-        }
 
         //private void Button_PasswordChange_Click(object sender, RoutedEventArgs e)
         //{
