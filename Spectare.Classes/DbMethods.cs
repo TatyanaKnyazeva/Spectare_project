@@ -92,7 +92,7 @@ namespace Spectare.Classes
         {
             using(var context=new Context())
             {
-                User.Name.(User.Name,newname);
+                User.Name=User.Name.Replace(User.Name,newname);
                 context.SaveChanges();
             }
         }
@@ -100,7 +100,7 @@ namespace Spectare.Classes
         {
             using (var context = new Context())
             {
-                User.Email.Replace(User.Email, newemail);
+                User.Email=User.Email.Replace(User.Email, newemail);
                 context.SaveChanges();
             }
         }
@@ -108,7 +108,7 @@ namespace Spectare.Classes
         {
             using (var context = new Context())
             {
-                User.Password.Replace(User.Password,GetHash(newpassword));
+                User.Password=User.Password.Replace(User.Password,GetHash(newpassword));
                 context.SaveChanges();
             }
         }
