@@ -75,7 +75,7 @@
                             <EventTrigger RoutedEvent="MouseLeave">
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation To="#FFFBFDFF" Duration="0:0:0.2" Storyboard.TargetName="Border" Storyboard.TargetProperty="Background.Color"/>
+                                        <ColorAnimation To="#FF9EB8F0" Duration="0:0:0.2" Storyboard.TargetName="Border" Storyboard.TargetProperty="Background.Color"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
