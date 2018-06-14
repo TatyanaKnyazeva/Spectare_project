@@ -43,5 +43,10 @@ namespace Spectare
             menuwindow.Show();
             Close();
         }
+
+        private void Row_DoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
     }
 }

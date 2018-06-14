@@ -24,6 +24,11 @@
                         <DataGridTextColumn Width="1*" Header="Film Title" Binding="{Binding Title}"/>
                         <DataGridHyperlinkColumn Header="Hyper Link" Width="1*" Binding="{Binding WebLink}"/>
                     </DataGrid.Columns>
+                    <DataGrid.ItemContainerStyle>
+                        <Style TargetType="DataGridRow">
+                            <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+                        </Style>
+                    </DataGrid.ItemContainerStyle>
                 </DataGrid>
                 <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal"
                     VerticalAlignment="Top" HorizontalAlignment="Center">
