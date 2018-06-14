@@ -20,10 +20,11 @@ namespace Spectare
     /// </summary>
     public partial class Settings : Window
     {
-        
-        public Settings()
+        DbMethods methods = new DbMethods();
+        public Settings (DbMethods _methods)
         {
             InitializeComponent();
+            methods = _methods;
         }
 
         private User _curUser;
@@ -31,51 +32,50 @@ namespace Spectare
         {
             InitializeComponent();
             _curUser = curUser;
-            textBoxName.Text = _curUser.Name;
-            textBoxEmail.Text = _curUser.Email;
+            TBName.Text = _curUser.Name;
+            TBEmail.Text = _curUser.Email;
+            TBPassword.Text = _curUser.Password;
         }
 
-        private void textBoxSurname_LostFocus(object sender, RoutedEventArgs e)
-            {
-                if (string.IsNullOrEmpty(textBoxSurname.Text.Trim()))
-                    fakeTextBoxSurname.Visibility = System.Windows.Visibility.Visible;
-            }
+        
+        private void TBName_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (TBName.Text == "Enter new name")
+                TBName.Text = "";
+        }
+        private void TBEmail_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (TBEmail.Text == "Enter new email")
+                TBEmail.Text = "";
+        }
+        private void TBPassword_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (TBPassword.Text == "Enter new password")
+                TBPassword.Text = "";
+        }
 
-            private void textBoxName_LostFocus(object sender, RoutedEventArgs e)
-            {
-                if (string.IsNullOrEmpty(textBoxName.Text.Trim()))
-                    fakeTextBoxName.Visibility = System.Windows.Visibility.Visible;
-            }
 
-            private void textBoxEmail_LostFocus(object sender, RoutedEventArgs e)
-            {
-                if (string.IsNullOrEmpty(textBoxEmail.Text.Trim()))
-                    fakeTextBoxEmail.Visibility = System.Windows.Visibility.Visible;
-            }
-
-            private void fakeTextBoxName_GotFocus(object sender, RoutedEventArgs e)
-            {
-                fakeTextBoxName.Visibility = System.Windows.Visibility.Collapsed;
-                textBoxName.Focus();
-            }
-
-            private void fakeTextBoxSurname_GotFocus(object sender, RoutedEventArgs e)
-            {
-                fakeTextBoxSurname.Visibility = System.Windows.Visibility.Collapsed;
-                textBoxSurname.Focus();
-            }
-
-            private void fakeTextBoxEmail_GotFocus(object sender, RoutedEventArgs e)
-            {
-                fakeTextBoxEmail.Visibility = System.Windows.Visibility.Collapsed;
-                textBoxEmail.Focus();
-            }
-
+        private void TBName_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (TBName.Text == "")
+                TBName.Text = "Enter new name";
+        }
+        private void TBEmail_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (TBEmail.Text == "")
+                TBEmail.Text = "Enter new email";
+        }
+        private void TBPassword_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (TBPassword.Text == "")
+                TBPassword.Text = "Enter new password";
+        }
             private void Button_Back_Click(object sender, RoutedEventArgs e)
         {
-
+            MenuWindow menuwindow = new MenuWindow(methods);
+            menuwindow.Show();
+            this.Close();
         }
-        
 
         private void Button_LogOut_Click(object sender, RoutedEventArgs e)
         {
@@ -83,13 +83,10 @@ namespace Spectare
             loginWindow.Show();
             Close();
         }
+        private void Editing(object sender, RoutedEventArgs e)
+        {
 
-
-        //private void Button_PasswordChange_Click(object sender, RoutedEventArgs e)
-        //{
-        //    var passwordChangeWindow = new PasswordChangeWindow(_curUser);
-        //    passwordChangeWindow.ShowDialog();
-        //}
+        }
     }
 
     }

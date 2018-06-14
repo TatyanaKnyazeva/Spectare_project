@@ -89,6 +89,5 @@
                         BorderBrush="#FFE6E1E1"  Click="signupbutton_Click">Create account</Button>
             </Grid>
         </Border>
-       
     </Grid>
 </Window>

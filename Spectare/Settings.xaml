@@ -7,72 +7,39 @@
         mc:Ignorable="d"
         Title="SETTINGS"  Height="450" Width="800" Name="SettingsWindow">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Label  Style="{StaticResource headerTextStyle}" Grid.Row="0" Grid.Column="0">Edit your information</Label>
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <TextBox Grid.Column="0" Width="200" FontSize="20" VerticalAlignment="Center" 
-                     HorizontalAlignment="Center" Name="textBoxName" LostFocus="textBoxName_LostFocus"/>
-            <TextBox Width="200" Foreground="#d8d8d8" FontSize="20" VerticalAlignment="Center"
-                     Margin="5" Visibility="Hidden"
-                     Name="fakeTextBoxName" GotFocus="fakeTextBoxName_GotFocus">Name</TextBox>
-            <TextBlock Name="emptyNameMessage" Visibility="Collapsed" Grid.Row="1" 
-                       HorizontalAlignment="Center" Width="200" Foreground="Red">Name field must be not empty</TextBlock>
-        </Grid>
-        <Grid Grid.Row="2">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <TextBox Grid.Row="0" Grid.Column="0" Width="200" FontSize="20" VerticalAlignment="Center" Margin="5"
-                     Name="textBoxSurname" LostFocus="textBoxSurname_LostFocus"></TextBox>
-            <TextBox Width="200" Foreground="#d8d8d8" FontSize="20" 
-                     VerticalAlignment="Center" Margin="5" Visibility="Collapsed"
-                     Name="fakeTextBoxSurname" GotFocus="fakeTextBoxSurname_GotFocus">Surname</TextBox>
-            <TextBlock Name="emptySurnameMessage" Visibility="Collapsed" Grid.Row="1" 
-                       HorizontalAlignment="Center" Width="200" Foreground="Red">Surname field must be not empty</TextBlock>
-        </Grid>
-        <Grid Grid.Row="3">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <TextBox Grid.Row="0" Grid.Column="0" Width="200" FontSize="20" VerticalAlignment="Center" Margin="5"
-                     Name="textBoxEmail" LostFocus="textBoxEmail_LostFocus"/>
-            <TextBox Width="200" Foreground="#d8d8d8" FontSize="20" 
-                     VerticalAlignment="Center" Margin="5" Visibility="Collapsed"
-                     Name="fakeTextBoxEmail" GotFocus="fakeTextBoxEmail_GotFocus">Email</TextBox>
-            <TextBlock Name="emptyEmailMessage" Visibility="Collapsed" Grid.Row="1" 
-                       HorizontalAlignment="Center" Width="200" Foreground="Red">Email must be not empty
-            </TextBlock>
-            <TextBlock Name="existingEmailMessage" Visibility="Collapsed" Grid.Row="1" 
-                       HorizontalAlignment="Center" Width="200" Foreground="Red">A user with this email already exists
-            </TextBlock>
-        </Grid>
-        <!--<Button Grid.Row="4" Grid.ColumnSpan="3" VerticalAlignment="Top" 
-                Margin="10 0 10 20" Width="200" FontSize="20"
-                Click="Button_PasswordChange_Click">Change Password</Button>-->
-        <Button Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+        <Grid.Background>
+            <ImageBrush ImageSource="images/bluebg.png"/>
+        </Grid.Background>
+        <Border Margin="25" Background="AliceBlue" CornerRadius="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Foreground="CornflowerBlue" FontSize="30" Style="{StaticResource headerTextStyle}" Grid.Row="0" Grid.Column="0">Edit your information</Label>
+                <TextBox Style="{StaticResource headerTextStyle}" Grid.Row="1" Height="25" Width="250" Text="Enter new name" Name="TBName"
+            GotFocus="TBName_GotFocus" LostFocus="TBName_LostFocus" 
+        ></TextBox>
+                <TextBox Style="{StaticResource headerTextStyle}" Grid.Row="2" Height="25" Width="250" Text="Enter new email" Name="TBEmail"
+         GotFocus="TBEmail_GotFocus" LostFocus="TBEmail_LostFocus" 
+        ></TextBox>
+                <TextBox Style="{StaticResource headerTextStyle}" Grid.Row="3" Height="25" Width="250" Text="Enter new password" Name="TBPassword"
+            GotFocus="TBPassword_GotFocus" LostFocus="TBPassword_LostFocus" 
+        ></TextBox>
+                <Button Background="CornflowerBlue" Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right"
                 Margin="5" Height="40" Width="75" Click="Button_Back_Click">Back</Button>
-        <Button Grid.Row="5" Grid.Column="0" Style="{StaticResource buttonStyle}" Click="Button_LogOut_Click">Log Out</Button>
-        <Button Grid.Column="0" Grid.Row="4"  Style="{StaticResource buttonStyle}">
-            Submit
-        </Button>
-        <Label  Style="{StaticResource headerTextStyle}" Grid.Row="0" Grid.Column="1">Edit your preferences</Label>
-       
+                <Button  Background="CornflowerBlue" Grid.Row="5" Grid.Column="0" Style="{StaticResource buttonStyle}" Click="Button_LogOut_Click">Log Out</Button>
+                <Button Background="CornflowerBlue" Grid.Column="0" Grid.Row="4"  Style="{StaticResource buttonStyle}" Click="Editing">
+                    Submit
+                </Button>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
