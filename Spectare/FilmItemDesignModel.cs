@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spectare.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +9,13 @@ namespace Spectare
 {
     public class FilmItemDesignModel : FilmItemViewModel
     {
-        public static FilmItemDesignModel item => new FilmItemDesignModel();
+        public static FilmItemDesignModel Instance => new FilmItemDesignModel();
+        DbMethods methods = new DbMethods(); 
 
         public FilmItemDesignModel()
         {
-            FSname = "Halt and catch fire";
-            Imagepath = "Images/cinemab.png";
+            FSname = methods.GetAllFilms().First().Title;
+            Imagepath = methods.GetAllFilms().First().PosterLink;
         }
     }
 }

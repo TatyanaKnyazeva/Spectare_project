@@ -34,10 +34,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,16 +64,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="UserControls\FavouriteItemControl.xaml.cs">
-      <DependentUpon>FavouriteItemControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="FavouriteItemDesignModel.cs" />
     <Compile Include="FavouriteItemViewModel.cs" />
-    <Compile Include="UserControls\FavouritesControl.xaml.cs">
-      <DependentUpon>FavouritesControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="FavouritesDesignModel.cs" />
     <Compile Include="FavouritesViewModel.cs" />
+    <Compile Include="FavouritesWindow.xaml.cs">
+      <DependentUpon>FavouritesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Film%27s Page.xaml.cs">
       <DependentUpon>Film%27s Page.xaml</DependentUpon>
     </Compile>
@@ -101,11 +105,7 @@
     <Compile Include="UserControls\FilmsListControl.xaml.cs">
       <DependentUpon>FilmsListControl.xaml</DependentUpon>
     </Compile>
-    <Page Include="UserControls\FavouriteItemControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControls\FavouritesControl.xaml">
+    <Page Include="FavouritesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

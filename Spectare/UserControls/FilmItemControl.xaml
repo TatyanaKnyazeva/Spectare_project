@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="186" d:DesignWidth="189">
     
-    <Grid  Background="White" d:DataContext="{x:Static local:FilmItemDesignModel.item}">
+    <Grid  Background="White" d:DataContext="{x:Static local:FilmItemDesignModel.Instance}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="30*"/>
@@ -18,7 +18,7 @@
             <RowDefinition Height="55*"/>
             <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="1" Grid.Row="2" Margin="5" Foreground="Silver" Text="{Binding FSname}" FontSize="7" HorizontalAlignment="Left" VerticalAlignment=""/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Margin="5" Foreground="Silver" Text="{Binding FSname}" FontSize="7" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Button Name="imagebutton" Grid.Column="1" Grid.Row="1" Margin="5" Click="imagebutton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">

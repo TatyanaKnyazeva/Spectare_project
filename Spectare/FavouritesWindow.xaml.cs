@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Spectare.Classes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,19 +11,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Spectare
 {
     /// <summary>
-    /// Логика взаимодействия для FavouriteItemControl.xaml
+    /// Логика взаимодействия для FavouritesWindow.xaml
     /// </summary>
-    public partial class FavouriteItemControl : UserControl
+    public partial class FavouritesWindow : Window
     {
-        public FavouriteItemControl()
+        List<Film> films = new List<Film>();
+
+        public FavouritesWindow(List<Film> _favFilms)
         {
             InitializeComponent();
+            films = _favFilms;
         }
     }
 }

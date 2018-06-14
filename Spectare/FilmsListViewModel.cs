@@ -8,7 +8,7 @@ namespace Spectare
 {
     public class FilmsListViewModel
     {
-        public List<FilmItemDesignModel> Items { get; set; }
+        public List<FilmItemViewModel> Items { get; set; }
 
     }
 }

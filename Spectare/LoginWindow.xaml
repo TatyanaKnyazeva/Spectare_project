@@ -41,7 +41,7 @@
                         <Image Grid.Column="0" Source="images/Password1.png"/>
                         <TextBox Name="passwordtextbox"  Grid.Column="1" VerticalAlignment="Center" FontSize="12" 
                                  BorderThickness="0 0 0 0" Foreground="Silver"
-                                 GotFocus="passwordtextbox_GotFocus"  Text="Password(at least 8 characters)"/>
+                                 GotFocus="passwordtextbox_GotFocus"  Text="Password"/>
                         <PasswordBox Name="passwordbox" Grid.Column="1" BorderThickness="0 0 0 0" LostFocus="passwordbox_LostFocus"
                                      VerticalAlignment="Center" Visibility="Collapsed"/>
                     </Grid>
