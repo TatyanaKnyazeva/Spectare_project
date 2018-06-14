@@ -36,8 +36,8 @@
                 </Grid.ColumnDefinitions>
                 <Border Background="#FF418CE6" Margin="0,15" />
                 <Button x:Name="FilmsButton" Grid.Column="1" Style="{StaticResource TextButton}" Content="Films" Foreground="White"
-                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15"
-                        Click="FilmsButton_Click"/>
+                        HorizontalAlignment="Right" VerticalAlignment="Center" Padding="7" FontSize="15"
+                        Click="FilmsButton_Click" Margin="0,15" Width="144"/>
             </Grid>
         </Border>
         <Border Grid.Row="2">

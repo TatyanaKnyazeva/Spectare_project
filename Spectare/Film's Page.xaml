@@ -28,6 +28,6 @@
         <TextBox x:Name="Actors" Grid.Row="3" Grid.Column="1" Background="Transparent" BorderThickness="0" TextWrapping="Wrap" AcceptsReturn="True"  FontSize="14" Foreground="#FFFFD460"/>
         <Button x:Name="AddtoFavourites" Grid.Row="4" Style="{StaticResource RegularButton}" Content="Add to Favourites" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Margin="44,9,44,20" Width="196"/>
         <Button Grid.Row="4" Style="{StaticResource RegularButton}" Content="Delete from Favourites" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Height="0" Margin="142,41,142,28" Width="0" />
-        <Image x:FieldModifier="Poster" Grid.RowSpan="4" Margin="10,10,10,8"/>
+        <Image x:Name="Poster" Grid.RowSpan="4" Margin="10,10,10,8"/>
     </Grid>
 </Window>
