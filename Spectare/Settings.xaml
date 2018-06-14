@@ -73,6 +73,6 @@
             Submit
         </Button>
         <Label  Style="{StaticResource headerTextStyle}" Grid.Row="0" Grid.Column="1">Edit your preferences</Label>
-        <Button Grid.Column="1" Grid.Row="1" Style="{StaticResource buttonStyle}" Click="GoToHelper"> My helper</Button>
+       
     </Grid>
 </Window>
