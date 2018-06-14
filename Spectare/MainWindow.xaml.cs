@@ -55,7 +55,7 @@ namespace Spectare
         {
             var loginwindow = new LoginWindow();
             loginwindow.Show();
-            this.Close();
+            Close();
         }
 
         private void textbox3_GotFocus(object sender, RoutedEventArgs e)
@@ -143,5 +143,6 @@ namespace Spectare
                 }
             }
         }
+
     }
 }

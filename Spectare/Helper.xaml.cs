@@ -38,7 +38,7 @@ namespace Spectare
         }
         static string Ans(string q)
         {
-            string tr = ")(:^=!@#$%&*';:><.,/?",
+            string tr = ")(:^=!@#$%&*'-;:><.,/?",
                 ans = "";
             q = q.ToLower();
             q = Trim(q, tr.ToCharArray());

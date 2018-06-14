@@ -35,7 +35,17 @@ namespace Spectare
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            if (dataGridFavourites.SelectedItems.Count != 0)
+            {
+                Film film = (Film)dataGridFavourites.SelectedItems[0];
+                methods.RemoveFromFavorites(methods.User, film);
+                dataGridFavourites.ItemsSource = null;
+                dataGridFavourites.ItemsSource = methods.User.FavFilms;
+            }
+            else
+            {
+                MessageBox.Show("Выберите фильм, который надо удалить");
+            }
         }
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)

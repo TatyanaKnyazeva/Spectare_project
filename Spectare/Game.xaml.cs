@@ -21,18 +21,52 @@ namespace Spectare
     /// </summary>
     public partial class Game : Window
     {
+        List<Film> films = new List<Film>();
+
         DbMethods methods = new DbMethods();
         public Game(DbMethods _methods)
         {
             InitializeComponent();
             methods = _methods;
+
+            films = methods.GetAllFilms();
+            Film film = new Film();
+            film = films[0];
+            string stringpath = film.PhotoLink1;
+            Uri imageuri = new Uri(stringpath, UriKind.Relative);
+            BitmapImage imagebitmap = new BitmapImage(imageuri);
+            FilmImage.Source = imagebitmap;
         }
 
         
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-
+            Film f = new Film();
+            if (Answer.Text == films[0].Title)
+            {
+                f = films[0];
+                films.Remove(f);
+                if (films.Count == 0)
+                {
+                    MessageBox.Show("Вы победили! Поздравляем!!!");
+                    MenuWindow menuwindow = new MenuWindow(methods);
+                    menuwindow.Show();
+                    Close();
+                }
+                else
+                {
+                    f = films[0];
+                    string stringpath = f.PhotoLink1;
+                    Uri imageuri = new Uri(stringpath, UriKind.Relative);
+                    BitmapImage imagebitmap = new BitmapImage(imageuri);
+                    FilmImage.Source = imagebitmap;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ошибка, попробуйте еще раз((( Учтите, что названия нужно вводить на русском");
+            }
         }
     }
 }
