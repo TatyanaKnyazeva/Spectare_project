@@ -23,13 +23,11 @@
             <RowDefinition Height="62*"/>
             <RowDefinition Height="63*"/>
         </Grid.RowDefinitions>
-       
+        <local:FilmsListControl Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="7" Visibility="Collapsed" x:Name="filmslistcontrol"/>
         <Border Grid.Column="0" Grid.ColumnSpan="4" Background="#FFFBFDFF">
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Text="Spectare" FontSize="20" Margin="14 0 0 0" Foreground="#FF9EB8F0" FontWeight="Bold"/>
         </Border>
         <Border Grid.Row="1" Grid.RowSpan="7" Background="#FF9EB8F0"/>
-        <Button Grid.Column="1" Style="{StaticResource TextButton}" Content="Films" Foreground="#FF9EB8F0" />
-        <Button Grid.Column="2" Style="{StaticResource TextButton}" Content="TV Shows" Foreground="#FF9EB8F0"/>
         <Border Grid.Row="1">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -37,8 +35,9 @@
                     <ColumnDefinition Width="123*"/>
                 </Grid.ColumnDefinitions>
                 <Border Background="#FF418CE6" Margin="0,15" />
-                <Button Grid.Column="1" Style="{StaticResource TextButton}" Content="Films and Tv Shows" Foreground="White"
-                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15"/>
+                <Button x:Name="FilmsButton" Grid.Column="1" Style="{StaticResource TextButton}" Content="Films" Foreground="White"
+                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15"
+                        Click="FilmsButton_Click"/>
             </Grid>
         </Border>
         <Border Grid.Row="2">
@@ -48,22 +47,36 @@
                     <ColumnDefinition Width="123*"/>
                 </Grid.ColumnDefinitions>
                 <Border Background="#FF418CE6" Margin="0,15"/>
-                <Button Grid.Column="1" Style="{StaticResource TextButton}" Content="Favourites" Foreground="White"
-                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15" Margin="0,15"/>
+                <Button x:Name="FavouritesButton" Grid.Column="1" Style="{StaticResource TextButton}" Content="Favourites" Foreground="White"
+                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15" Margin="0,15"
+                        Click="FavouritesButton_Click"/>
             </Grid>
         </Border>
-        <Border Grid.Row="5">
+        <Border Grid.Row="3">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="5*"/>
                     <ColumnDefinition Width="123*"/>
                 </Grid.ColumnDefinitions>
                 <Border Background="#FF418CE6" Margin="0,15"/>
-                <Button Grid.Column="1" Style="{StaticResource TextButton}" Content="Game" Foreground="White"
-                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15"/>
+                <Button x:Name="helperButton" Grid.Column="1" Style="{StaticResource TextButton}" Content="Helper" Foreground="White"
+                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15" Margin="0,15" 
+                        Click="helperButton_Click"/>
             </Grid>
         </Border>
-        <Border Grid.Row="6">
+        <Border Grid.Row="4">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="123*"/>
+                </Grid.ColumnDefinitions>
+                <Border Background="#FF418CE6" Margin="0,15"/>
+                <Button x:Name="GameButton" Grid.Column="1" Style="{StaticResource TextButton}" Content="Game" Foreground="White"
+                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15"
+                        Click="GameButton_Click"/>
+            </Grid>
+        </Border>
+        <Border Grid.Row="5">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="5*"/>

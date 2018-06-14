@@ -26,16 +26,6 @@ namespace Spectare
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
             Settings settings = new Settings();
@@ -43,5 +33,28 @@ namespace Spectare
             Close();
         }
 
+        private void FilmsButton_Click(object sender, RoutedEventArgs e)
+        {
+            filmslistcontrol.Visibility = Visibility.Visible;
+        }
+
+        private void FavouritesButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void helperButton_Click(object sender, RoutedEventArgs e)
+        {
+            Helper helper = new Helper();
+            helper.Show();
+            Close();
+        }
+
+        private void GameButton_Click(object sender, RoutedEventArgs e)
+        {
+            Game game = new Game();
+            game.Show();
+            Close();
+        }
     }
 }

@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="186" d:DesignWidth="189">
     
-    <Grid  Background="White" d:DataContext="{x:Static local:FilmItemDesignModel.Instance}">
+    <Grid  Background="White" d:DataContext="{x:Static local:FilmItemDesignModel.}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="30*"/>

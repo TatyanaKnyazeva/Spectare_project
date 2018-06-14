@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace Spectare
 {
@@ -14,8 +15,8 @@ namespace Spectare
 
         public FilmItemDesignModel()
         {
-            FSname = methods.GetAllFilms().First().Title;
-            Imagepath = methods.GetAllFilms().First().PosterLink;
+            FSname = "rgthyjukikjuyt";
+            Imagepath = "Images/bluebg.png";
         }
     }
 }
