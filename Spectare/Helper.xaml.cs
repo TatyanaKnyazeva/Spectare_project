@@ -37,8 +37,12 @@ namespace Spectare
         }
         private void ButtonHelp_Click(object sender, RoutedEventArgs e)
         {
-            string q = textBoxNumber.Text;
+
+           string q = textBoxNumber.Text;
             TB2.Text = Ans(q);
+            textBoxNumber.Clear();
+                
+            
         }
         //Deleting letters
         static string Trim(string str, char[] chars)
@@ -57,14 +61,13 @@ namespace Spectare
             q = q.ToLower();
             q = Trim(q, tr.ToCharArray());
             string[] baza = File.ReadAllLines("../../1");
+            ans = "Are you sure? Please, be more concentrate, I don`t understand this.";
             for (int i = 0; i < baza.Length; i += 2)
             {
-                if (q == baza[i])
+               if (q == baza[i])
                 {
                     ans = baza[i + 1];
-                    break;
                 }
-
             }
             return ans;
         }
