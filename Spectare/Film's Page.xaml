@@ -26,8 +26,11 @@
         <TextBox x:Name="Description" Grid.Column="1" Grid.Row="1" Background="Transparent" BorderThickness="0" TextWrapping="Wrap" AcceptsReturn="True"  FontSize="14" Foreground="#FFFFD460"/>
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Actors:" FontSize="18" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="5,0,0,5" Foreground="#FFFFD460" Height="24" Grid.RowSpan="2" Width="54"/>
         <TextBox x:Name="Actors" Grid.Row="3" Grid.Column="1" Background="Transparent" BorderThickness="0" TextWrapping="Wrap" AcceptsReturn="True"  FontSize="14" Foreground="#FFFFD460"/>
-        <Button x:Name="AddtoFavourites" Grid.Row="4" Style="{StaticResource RegularButton}" Content="Add to Favourites" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Margin="44,9,44,20" Width="196"/>
-        <Button Grid.Row="4" Style="{StaticResource RegularButton}" Content="Delete from Favourites" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Height="0" Margin="142,41,142,28" Width="0" />
+
+        <Button x:Name="AddtoFavourites" Click="AddtoFavourites_Click" Grid.Row="4" Style="{StaticResource RegularButton}" Content="Add to Favourites" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button x:Name="DeleteFromFavourites" Click="DeleteFromFavourites_Click" Grid.Row="4" Style="{StaticResource RegularButton}" Content="Delete from Favourites" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Height="0" Margin="142,41,142,28" />
         <Image x:Name="Poster" Grid.RowSpan="4" Margin="10,10,10,8"/>
+        <Button x:Name="Back" Click="Back_Click" Grid.Column="1" Grid.Row="4" Style="{StaticResource RegularButton}" Content="back" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20 5" />
+
     </Grid>
 </Window>

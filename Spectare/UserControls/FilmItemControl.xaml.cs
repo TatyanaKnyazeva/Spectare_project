@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spectare.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace Spectare
     /// </summary>
     public partial class FilmItemControl : UserControl
     {
+        DbMethods methods = new DbMethods();
         public FilmItemControl()
         {
             InitializeComponent();
@@ -27,7 +29,9 @@ namespace Spectare
 
         private void imagebutton_Click(object sender, RoutedEventArgs e)
         {
-
+           Film film = methods.GetAllFilms().FirstOrDefault(f => f.Title == FilmTitle.Text);
+           Film_s_Page filmpage = new Film_s_Page(methods, film);
+           filmpage.Show();
         }
     }
 }
