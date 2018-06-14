@@ -42,6 +42,8 @@ namespace Spectare
             Poster.Source = imagebitmap;
         }
 
+        
+
         private void AddtoFavourites_Click(object sender, RoutedEventArgs e)
         {
             methods.AddToFavorites(methods.User, film);

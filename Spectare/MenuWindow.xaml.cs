@@ -34,28 +34,31 @@ namespace Spectare
             Close();
         }
 
-        private void GoToHelper(object sender, RoutedEventArgs e)
-        {
-            Helper helper = new Helper(methods);
-            helper.Show();
-            Close();
-        }
-
         private void GameButton_Click(object sender, RoutedEventArgs e)
         {
-            Game game = new Game();
+            Game game = new Game(methods);
             game.Show();
             Close();
         }
 
         private void FilmsButton_Click(object sender, RoutedEventArgs e)
         {
-
+            filmslistcontrol.Visibility = Visibility.Visible;
         }
 
         private void GoToSettings(object sender, RoutedEventArgs e)
         {
+            Settings settings = new Settings();
+            settings.Show();
+            Close();
+        }
 
+
+        private void GoToHelper_Click(object sender, RoutedEventArgs e)
+        {
+            Helper helper = new Helper(methods);
+            helper.Show();
+            Close();
         }
     }
 }
