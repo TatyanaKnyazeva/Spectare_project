@@ -32,7 +32,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Border BorderBrush="#FFCBE7F1" Margin="15 25 0 25"   CornerRadius="1" BorderThickness="5" Background="#FFCBE7F1">
-                    <TextBox Grid.Column="1" Background="Transparent"  Foreground="White" BorderThickness="0"></TextBox>
+                    <TextBox Name="Answer" Grid.Column="1" Background="Transparent"  Foreground="White" BorderThickness="0"></TextBox>
                 </Border>
                 <Button Grid.Column="1" Name="Next" Click="Next_Click" Style="{StaticResource RegularButton}" Content="Next" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></Button>
             </Grid>

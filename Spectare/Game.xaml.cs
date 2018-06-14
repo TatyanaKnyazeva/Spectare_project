@@ -42,7 +42,31 @@ namespace Spectare
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
+            Film f = new Film();
+            if (Answer.Text == films[0].Title)
+            {
+                f = films[0];
+                films.Remove(f);
+                if (films == null)
+                {
+                    MessageBox.Show("Вы победили! Поздравляем!!!");
+                    MenuWindow menuwindow = new MenuWindow(methods);
+                    menuwindow.Show();
+                    Close();
+                }
+                else
+                {
+                    f = films[0];
+                    string stringpath = f.PhotoLink1;
+                    Uri imageuri = new Uri(stringpath, UriKind.Relative);
+                    BitmapImage imagebitmap = new BitmapImage(imageuri);
+                    FilmImage.Source = imagebitmap;
+                }
+            }
+            else
+            {
 
+            }
         }
     }
 }
