@@ -36,19 +36,20 @@
                 </Grid.ColumnDefinitions>
                 <Border Background="#FF418CE6" Margin="0,15" />
                 <Button x:Name="FilmsButton" Grid.Column="1" Style="{StaticResource TextButton}" Content="Films" Foreground="White"
-                        HorizontalAlignment="Right" VerticalAlignment="Center" Padding="7" FontSize="15"
+                        HorizontalAlignment="Left" VerticalAlignment="Center" Padding="7" FontSize="15"
                         Click="FilmsButton_Click" Margin="0,15" Width="144"/>
             </Grid>
         </Border>
         <Border Grid.Row="2">
             <Grid>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="19*"/>
                     <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="123*"/>
                 </Grid.ColumnDefinitions>
                 <Border Background="#FF418CE6" Margin="0,15"/>
                 <Button Grid.Column="1" Style="{StaticResource TextButton}" Content="Favourites" Foreground="White"
-                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15" Margin="0,15"/>
+                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15" Margin="0,15" Click="FavouritesButton_Click" Grid.ColumnSpan="2"/>
             </Grid>
         </Border>
         <Border Grid.Row="4">
