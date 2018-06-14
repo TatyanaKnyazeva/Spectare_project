@@ -21,7 +21,7 @@
             <ColumnDefinition Width="30*"/>
         </Grid.ColumnDefinitions>
         <Border Grid.Column="1" Grid.Row="1" Background="White" CornerRadius="10" Margin="12">
-            <Image/>
+            <Image x:Name="FilmImage"/>
         </Border>
         <TextBlock Grid.Column="1" Text="{Binding CountDown}" FontSize="35" Foreground="#FFFFB03D" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <Border Grid.Column="1" Grid.Row="2" Background="Transparent">

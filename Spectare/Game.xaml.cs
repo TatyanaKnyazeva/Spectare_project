@@ -21,15 +21,21 @@ namespace Spectare
     /// </summary>
     public partial class Game : Window
     {
+        List<Film> films = new List<Film>();
+
         DbMethods methods = new DbMethods();
         public Game(DbMethods _methods)
         {
             InitializeComponent();
             methods = _methods;
-            foreach(var f in methods.GetAllFilms())
-            {
 
-            }
+            films = methods.GetAllFilms();
+            Film film = new Film();
+            film = films[0];
+            string stringpath = film.PhotoLink1;
+            Uri imageuri = new Uri(stringpath, UriKind.Relative);
+            BitmapImage imagebitmap = new BitmapImage(imageuri);
+            FilmImage.Source = imagebitmap;
         }
 
         
