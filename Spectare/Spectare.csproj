@@ -57,14 +57,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="UserControls\FavouriteItemControl.xaml.cs">
-      <DependentUpon>FavouriteItemControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="FavouriteItemDesignModel.cs" />
     <Compile Include="FavouriteItemViewModel.cs" />
-    <Compile Include="UserControls\FavouritesControl.xaml.cs">
-      <DependentUpon>FavouritesControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="FavouritesDesignModel.cs" />
     <Compile Include="FavouritesViewModel.cs" />
     <Compile Include="Film%27s Page.xaml.cs">
@@ -101,14 +95,6 @@
     <Compile Include="UserControls\FilmsListControl.xaml.cs">
       <DependentUpon>FilmsListControl.xaml</DependentUpon>
     </Compile>
-    <Page Include="UserControls\FavouriteItemControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControls\FavouritesControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Film%27s Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
