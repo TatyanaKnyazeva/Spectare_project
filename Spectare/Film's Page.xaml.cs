@@ -45,7 +45,6 @@ namespace Spectare
                 AddtoFavourites.Visibility = Visibility.Collapsed;
                 DeleteFromFavourites.Visibility = Visibility.Visible;
             }
-
             if (methods.User.FavFilms.Any(f => f.Title == film.Title)==false)
             {
                 AddtoFavourites.Visibility = Visibility.Visible;

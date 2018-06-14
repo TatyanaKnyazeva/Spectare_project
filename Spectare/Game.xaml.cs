@@ -26,7 +26,10 @@ namespace Spectare
         {
             InitializeComponent();
             methods = _methods;
-            
+            foreach(var f in methods.GetAllFilms())
+            {
+
+            }
         }
 
         
