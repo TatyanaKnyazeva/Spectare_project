@@ -66,9 +66,9 @@ namespace Spectare.Classes.Migrations
                 {
                     Name = list1[0, i],
                     Email = list1[1, i],
-                    Password = list1[2, i]
+                    Password = DbMethods.GetHash(list1[2, i]),
                 };
-                context.Users.AddOrUpdate(user);
+                context.Users.AddOrUpdate(u => u.Name, user);
             }
 
             List<Film> films = new List<Film>();
