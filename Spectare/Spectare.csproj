@@ -70,18 +70,15 @@
     <Compile Include="Film%27s Page.xaml.cs">
       <DependentUpon>Film%27s Page.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FilmItemDesignModel.cs" />
-    <Compile Include="FilmItemViewModel.cs" />
-    <Compile Include="FilmsListDesignModel.cs" />
-    <Compile Include="FilmsListViewModel.cs" />
+    <Compile Include="Models\FilmItemDesignModel.cs" />
+    <Compile Include="Models\FilmItemViewModel.cs" />
+    <Compile Include="Models\FilmsListDesignModel.cs" />
+    <Compile Include="Models\FilmsListViewModel.cs" />
     <Compile Include="Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helper.xaml.cs">
       <DependentUpon>Helper.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Loading.xaml.cs">
-      <DependentUpon>Loading.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
@@ -91,9 +88,6 @@
     </Compile>
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="User%27s Favourites.xaml.cs">
-      <DependentUpon>User%27s Favourites.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\FilmItemControl.xaml.cs">
       <DependentUpon>FilmItemControl.xaml</DependentUpon>
@@ -114,10 +108,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Helper.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Loading.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,10 +132,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Settings.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="User%27s Favourites.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
