@@ -24,11 +24,14 @@ namespace Spectare
         public MenuWindow(DbMethods _methods)
         {
             InitializeComponent();
+            methods = _methods;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonFavorites_Click(object sender, RoutedEventArgs e)
         {
-
+            var favouriteswindow = new FavouritesWindow(methods.User.FavFilms);
+            favouriteswindow.Show();
+            Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

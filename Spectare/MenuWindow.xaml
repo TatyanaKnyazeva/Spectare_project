@@ -49,7 +49,7 @@
                 </Grid.ColumnDefinitions>
                 <Border Background="#FF418CE6" Margin="0,15"/>
                 <Button Grid.Column="1" Style="{StaticResource TextButton}" Content="Favourites" Foreground="White"
-                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15" Margin="0,15"/>
+                        HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="7" FontSize="15" Margin="0,15" Click="ButtonFavorites_Click"/>
             </Grid>
         </Border>
         <Border Grid.Row="5">
