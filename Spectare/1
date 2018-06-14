@@ -1,7 +1,7 @@
 привет
 Добрый день. Знаете, мой родной язык - английский, и сейчас я не хочу утруждать себя другими.
 hello
-Hello.
+What do you want?
 how are you
 I`m fine. Boring question.
 howre you
@@ -27,20 +27,64 @@ Help you with choosing a film.
 why are you here
 To help you.
 film
-Choose a genre.
+Choose a genre: animation, horror, sci-fi, action, comedy,
 animation
-Heart-warmig, beautiful, 
-Heart-warming
+Heart-warmig, beautiful, thought-provoking?
+heartwarming
 Tokyo Godfathers. The story of three homeless people who find a newborn baby while foraging through trash on Christmas eve and decide to care for the baby and track down its parents.
-Heartwarming
-Tokyo Godfathers. The story of three homeless people who find a newborn baby while foraging through trash on Christmas eve and decide to care for the baby and track down its parents.
-Beautiful
-Wolf Children. 
-comedy
-
-
+beautiful
+Wolf Children. The story offers a realistic yet ultimately forgiving view of maternity, and growing up in general. 
+thoughtprovoking
+Waking Life. The discussions revolve around issues such as metaphysics, free will, social philosophy or the meaning of life.
+horror
+Gripping, violent, mysterious?
+gripping
+It Follows. A genuinely creepy film that’s also very smart.
+violent
+Green Room. The basic premise: a lefty punk band winds up taking a show at a skinhead club because they are desperate for cash. The show goes well, but afterward the band accidentally witnesses something they shouldn’t have and are trapped in the club’s green room.
+mysterious
+Bone Tomahawk. The suspect is a faraway tribe known for its cannibalism practices, the movie follows the sheriff as he leads an expedition to save a disappearing woman.
+scifi
+Weird, original, emotional?
+weird
+The Fountain. Highly compelling science-fiction/fantasy film told in three interwoven parts related to the mythical concept of the Tree of Life.
+original
+The Science of Sleep. Bizarre and whimsical dream sequences follow and a sweet, if hesitant, love story unfolds. 
+emotional
+Beasts of the Southern Wild. Poetic and phantasmagorical, yet as grounded as a documentary, it’s a tale told through the eyes of a young girl living in extreme poverty just beyond the bounds of civilization. 
 action
-Captivating 
+Absorbing, no-brainer, smart?
+smart
+Serenity. The story revolves around the captain (Nathan Fillion) and crew of the titular space vessel that operate as space outlaws, running cargo and smuggling missions throughout the galaxy. 
+nobrainer
+Hot Fuzz. An obscenely funny flick that has an intriguing plot and an even greater set of characters.
+absorbing
+Sicario. It’s intense, intelligent and very realistic in its approach to action sequences. 
+comedy
+Up-lifting, well-acted, warm?
+uplifting
+50/50. In a movie that comes closer to a believable real life situation than most, 50/50 manages to mine humor, pathos and simple honesty from a dark and traditional situation. 
+wellacted
+Strictly Ballroom. An energetic, fun and hilarious movie.
+warm
+Up in the Air. Ryan Bingham enjoys living out of a suitcase for his job, travelling around the country firing people, but finds that lifestyle threatened by the presence of a potential love interest, and a new hire.
+documentary
+Charming, inspiring, slow?
+doc
+Charming, inspiring, slow?
+charming
+Faces Places. What happens to genius and complex filmmakers once they reach old age.
+inspiring
+Stop Making Sense. Widely regarded as one of the finest concert movies of all time, Stop Making Sense depicts musical innovators The Talking Heads at the height of their game.
+slow
+Rivers and Tides: Andy Goldsworthy Working with Time. A documentary about Andy Goldsworthy, the British artist whose art is made from natural materials found in their native environment.
+drama
+Humane, tear-jerker, instructive?
+humane
+
+
+
+
 adventure
 
 biography
@@ -57,7 +101,7 @@ filmnoir
 
 history
 
-horror
+
 
 music
 
@@ -67,7 +111,7 @@ mystery
 Good-Action
 romance
 Affectionate
-sci-fi
+
 Good-Action
 sport
 
