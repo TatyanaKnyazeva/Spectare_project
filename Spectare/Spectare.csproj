@@ -64,10 +64,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="FavouriteItemDesignModel.cs" />
-    <Compile Include="FavouriteItemViewModel.cs" />
-    <Compile Include="FavouritesDesignModel.cs" />
-    <Compile Include="FavouritesViewModel.cs" />
     <Compile Include="FavouritesWindow.xaml.cs">
       <DependentUpon>FavouritesWindow.xaml</DependentUpon>
     </Compile>

@@ -15,8 +15,8 @@ namespace Spectare
 
         public FilmItemDesignModel()
         {
-            FSname = "rgthyjukikjuyt";
-            Imagepath = "Images/bluebg.png";
+            FSname = methods.GetAllFilms().First().Title;
+            Imagepath = methods.GetAllFilms().First().PosterLink;
         }
     }
 }

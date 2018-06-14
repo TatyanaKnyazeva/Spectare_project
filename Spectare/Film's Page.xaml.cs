@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spectare.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,36 @@ namespace Spectare
     /// </summary>
     public partial class Film_s_Page : Window
     {
-        public Film_s_Page()
+        DbMethods methods = new DbMethods();
+        Film film { get; set; }
+        public Film_s_Page(DbMethods _methods,Film _film)
         {
             InitializeComponent();
+            methods = _methods;
+            film = _film;
+            FilmTitle.Text = film.Title;
+            Description.Text = film.Description;
+            string actors;
+            foreach(var a in film.Actors)
+            {
+                Actors.Text += a.Name;
+                if(a!=film.Actors.Last())
+                    Actors.Text +=",";
+            }   
+        }
+
+        private void AddtoFavourites_Click(object sender, RoutedEventArgs e)
+        {
+            methods.AddToFavorites(methods.User, film);
+            AddtoFavourites.Visibility = Visibility.Collapsed;
+            DeleteFromFavourites.Visibility = Visibility.Visible;
+        }
+
+        private void DeleteFromFavourites_Click(object sender, RoutedEventArgs e)
+        {
+            methods.RemoveFromFavorites(methods.User, film);
+            DeleteFromFavourites.Visibility = Visibility.Collapsed;
+            AddtoFavourites.Visibility = Visibility.Visible;
         }
     }
 }
